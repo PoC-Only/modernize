@@ -1,0 +1,36 @@
+<configuration debug="true">
+
+	<springProfile name="dev">
+		<appender name="FILE"
+			class="ch.qos.logback.core.FileAppender">
+			<file>/tmp/application-dev.log</file>
+			<encoder>
+				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+	<springProfile name="prod">
+		<appender name="FILE"
+			class="ch.qos.logback.core.FileAppender">
+			<file>/tmp/application-prod.log</file>
+			<encoder>
+				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.test" additivity="true">
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
