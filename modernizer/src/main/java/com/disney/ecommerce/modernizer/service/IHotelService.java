@@ -12,6 +12,5 @@ import com.disney.ecommerce.modernizer.domain.*;
 * @since   2018-04-17 
 */
 public interface IHotelService {
-	public List<HotelSummary> getAllHotels(HotelSearch input);
-	public HotelSummary getHotelDetails(HotelSearch input);
+
 }

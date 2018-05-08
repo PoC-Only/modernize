@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,10 +47,5 @@ public class App {
 		return new ApiInfo("REST Api Documentation", "REST Api Documentation", "1.0", "urn:tos",
 				new Contact("", "", ""), "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0",
 				new ArrayList<VendorExtension>());
-	}
-
-	@Bean
-	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		return new BCryptPasswordEncoder();
 	}
 }
