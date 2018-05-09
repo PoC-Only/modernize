@@ -57,7 +57,11 @@ public class SecurityManager implements ISecurityManager {
 				e.printStackTrace();
 			}
 			
-			if (myDLPHash==null || expiration==null || exp==null || exp.before(new Date()))
+			//if myDLPHash is null, then set it to empty string.  This means the user is DTA
+			if (myDLPHash==null)
+				myDLPHash = "";
+			
+			if (expiration==null || exp==null || exp.before(new Date()))
 				return false;
 
 			//compute the token and check with token2
