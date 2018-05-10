@@ -3,10 +3,13 @@ package com.disney.ecommerce.modernizer.security;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
+import com.disney.ecommerce.modernizer.controller.HotelController;
 import com.disney.ecommerce.modernizer.domain.Token;
 
 import java.security.Key;
@@ -26,14 +29,10 @@ import static com.disney.ecommerce.modernizer.security.SecurityConstants.SECRET;
  * @since 2018-04-17
  */
 @Component("JWTUtil")
-public class JWTUtil {
-	public static final String ISO_8601_24H_FULL_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
-
-	@Autowired
-	private Environment env;
-
-	public Token createJWT(String accountId, String myDLPHash, String expiration) {
-		DateFormat dateFormat = new SimpleDateFormat(JWTUtil.ISO_8601_24H_FULL_FORMAT);
+public class JWTUtil {	
+	private static final Logger LOGGER = LoggerFactory.getLogger(JWTUtil.class);
+	
+	public static Token createJWT(String accountId, String myDLPHash, String expiration) {
 		SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 
 		long nowMillis = System.currentTimeMillis();
@@ -56,7 +55,7 @@ public class JWTUtil {
 		return token;
 	}
 
-	public Token parseJWT(String jwt) {
+	public static Token parseJWT(String jwt) {
 		Token token = null;
 		try {
 			Claims claims = Jwts.parser().setSigningKey(DatatypeConverter.parseBase64Binary(SECRET)).parseClaimsJws(jwt)
@@ -68,7 +67,7 @@ public class JWTUtil {
 			token.setMyDLPHash(claims.get("myDLPHash").toString());
 			token.setExpiration(claims.get("expiration").toString());
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.error(e.getMessage());
 		}
 		return token;
 	}
