@@ -7,11 +7,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import junit.framework.TestCase;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
 public class AppTest extends TestCase {
 	
-	@Test
-	public void contextLoads() throws Exception {
-	}
 }

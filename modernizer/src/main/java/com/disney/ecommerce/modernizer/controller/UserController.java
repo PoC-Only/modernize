@@ -33,12 +33,11 @@ public class UserController {
 	public ResponseEntity<?> login(@RequestParam String username, @RequestParam String password) {
 		LOGGER.info("MODERNIZER: Endpoint:/user/guest Method:Post username:" + username);
 		
-		DateFormat dateFormat = new SimpleDateFormat(JWTUtil.ISO_8601_24H_FULL_FORMAT);
+		DateFormat dateFormat = new SimpleDateFormat(SecurityConstants.ISO_8601_24H_FULL_FORMAT);
 		long nowMillis = System.currentTimeMillis();
 		Date exp = new Date(nowMillis + SecurityConstants.EXPIRATION_TIME);
 		
-		JWTUtil jwtUtil = new JWTUtil();
-		Token token = jwtUtil.createJWT(username, password, dateFormat.format(exp));
+		Token token = JWTUtil.createJWT(username, password, dateFormat.format(exp));
 		
 		LOGGER.info("POST /user/guest :user name=" + username + " token=" + token);
 		return new ResponseEntity<Token>(token, HttpStatus.OK);
