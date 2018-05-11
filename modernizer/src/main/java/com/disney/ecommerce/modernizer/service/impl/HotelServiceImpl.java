@@ -10,7 +10,7 @@ import com.disney.ecommerce.modernizer.domain.*;
 import com.disney.ecommerce.modernizer.service.IHotelService;
 
 /**
-* HotelService class
+* HotelServiceImpl class
 *
 * @author  Renino Niefes
 * @version 1.0
