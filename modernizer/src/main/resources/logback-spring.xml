@@ -5,7 +5,28 @@
 			class="ch.qos.logback.core.FileAppender">
 			<file>/tmp/application-dev.log</file>
 			<encoder>
-				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n</pattern>
+				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n
+				</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+	<springProfile name="qa">
+		<appender name="FILE"
+			class="ch.qos.logback.core.FileAppender">
+			<file>/tmp/application-qa.log</file>
+			<encoder>
+				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n
+				</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+	<springProfile name="uat">
+		<appender name="FILE"
+			class="ch.qos.logback.core.FileAppender">
+			<file>/tmp/application-uat.log</file>
+			<encoder>
+				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n
+				</pattern>
 			</encoder>
 		</appender>
 	</springProfile>
@@ -14,7 +35,8 @@
 			class="ch.qos.logback.core.FileAppender">
 			<file>/tmp/application-prod.log</file>
 			<encoder>
-				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n</pattern>
+				<pattern>%d{yyyy-MM-dd'T'HH:mm:ss,SSS} %-5level %logger{36} %msg%n
+				</pattern>
 			</encoder>
 		</appender>
 	</springProfile>
