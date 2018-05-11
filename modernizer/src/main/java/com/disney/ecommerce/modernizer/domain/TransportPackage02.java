@@ -3,15 +3,21 @@ package com.disney.ecommerce.modernizer.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class TransportPackage02 {
-	
+	@JsonProperty(value="item_no")
 	private Integer itemNo;
+	@JsonProperty(value="package_code")
 	private String packageCode;
+	@JsonProperty(value="transport_mode")
 	private String transportMode;
 	private BigDecimal price;
 	private List<Transport> outbound;
 	private List<Transport> inbound;
+	@JsonProperty(value="guest_ids")
 	private List<Integer> guestIds;
+	@JsonProperty(value="assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
 	public Integer getItemNo() {
 		return itemNo;

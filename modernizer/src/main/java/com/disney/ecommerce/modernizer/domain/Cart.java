@@ -3,18 +3,31 @@ package com.disney.ecommerce.modernizer.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Cart {
+	
+	@JsonProperty(value="cart_id")
 	private Integer cartId;
+	@JsonProperty(value="creation_date")
 	private String creationDate;
+	@JsonProperty(value="cart_status")
 	private Boolean cartStatus;
+	@JsonProperty(value="sales_channel")
 	private String[] salesChannel;
 	private String[] market;
+	@JsonProperty(value="gross_total_amount")
 	private BigDecimal grossTotalAmount;
 	private String[] currency;
+	@JsonProperty(value="guest_information")
 	private List<Guest> guestInformation;
+	@JsonProperty(value="room_package")
 	private List<RoomPackage> roomPackage;
+	@JsonProperty(value="transport_package")
 	private List<TransportPackage> transportPackage;
+	@JsonProperty(value="add_ons")
 	private List<CartAddOn> addOns;
+	
 	public Integer getCartId() {
 		return cartId;
 	}

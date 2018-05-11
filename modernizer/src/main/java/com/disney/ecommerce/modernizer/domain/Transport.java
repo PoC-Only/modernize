@@ -1,20 +1,35 @@
 package com.disney.ecommerce.modernizer.domain;
 
-public class Transport {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Transport {
+	@JsonProperty(value="transportation_offer_name")
 	private String transportaionOfferName;
+	@JsonProperty(value="carrier_code")
 	private String carrierCode;
+	@JsonProperty(value="carrier_name")
 	private String carrierName;
+	@JsonProperty(value="flight_train_number")
 	private String flightTrainNumber;
+	@JsonProperty(value="isDirect")
 	private Boolean isDirect;
+	@JsonProperty(value="transportation_offer_details")
 	private String transportationOfferDetails;
+	@JsonProperty(value="plane_train_type")
 	private String planeTrainType;
+	@JsonProperty(value="fare_class")
 	private String fareClass;
+	@JsonProperty(value="service_class")
 	private String serviceClass;
+	@JsonProperty(value="departure_place")
 	private String departurePlace;
+	@JsonProperty(value="arrival_place")
 	private String arrivalPlace;
+	@JsonProperty(value="departure_date")
 	private String departureDate;
+	@JsonProperty(value="departure_hour")
 	private String departureHour;
+	@JsonProperty(value="arrival_hour")
 	private String arrivalHour;
 	
 	public String getTransportaionOfferName() {

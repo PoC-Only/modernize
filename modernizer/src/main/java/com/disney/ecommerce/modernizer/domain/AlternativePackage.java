@@ -3,33 +3,59 @@ package com.disney.ecommerce.modernizer.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class AlternativePackage {
+	@JsonProperty(value="alternative_package")
 	private String alternativePackage;
+	@JsonProperty(value="package_description")
 	private String packageDescription;
+	@JsonProperty(value="first_booking_validity_date")
 	private String firstBookingValidityDate;
+	@JsonProperty(value="last_booking_validity_date")
 	private String lastBookingValidityDate;
 	private Integer change;
+	@JsonProperty(value="hotel_code")
 	private String hotelCode;
+	@JsonProperty(value="hotel_name")
 	private String hotelName;
+	@JsonProperty(value="hotel_rating")
 	private String hotelRating;
+	@JsonProperty(value="hotel_status")
 	private String hotelStatus;
+	@JsonProperty(value="hotel_image")
 	private String hotelImage;
+	@JsonProperty(value="hotel_category")
 	private String hotelCategory;
+	@JsonProperty(value="check_in_day_of_week")
 	private String checkInStartDate;
+	@JsonProperty(value="check_in_end_date")
 	private String checkInEndDate;
+	@JsonProperty(value="check_in_day_of_week")
 	private String checkInDayOfWeek;
+	@JsonProperty(value="btl_before_switch")
 	private Integer btlBeforeSwitch;
+	@JsonProperty(value="btl_switch_hour")
 	private String btlSwitchHour;
+	@JsonProperty(value="btl_after_switch")
 	private Integer btlAfterSwitch;
+	@JsonProperty(value="party_mix_combination")
 	private List<PartyMix> partyMixCombination;
+	@JsonProperty(value="min_los")
 	private Integer minLos;
+	@JsonProperty(value="max_los")
 	private Integer maxLos;
+	@JsonProperty(value="availability_for_stay_date")
 	private Boolean availabilityForStayDate;
+	@JsonProperty(value="number_park_days")
 	private Integer numberParkDays;
+	@JsonProperty(value="price_default_room")
 	private BigDecimal priceDefaultRoom;
 	private String currency;
+	@JsonProperty(value="delta_price")
 	private BigDecimal deltaPrice;
 	private List<Room> rooms;
+	@JsonProperty(value="assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
 	public String getAlternativePackage() {
 		return alternativePackage;

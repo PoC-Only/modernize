@@ -1,9 +1,11 @@
 package com.disney.ecommerce.modernizer.domain;
 
-public class Inventory {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Inventory {
 	private String date;
 	private String seating;
+	@JsonProperty(value="class")
 	private String class1;
 	
 	public String getDate() {

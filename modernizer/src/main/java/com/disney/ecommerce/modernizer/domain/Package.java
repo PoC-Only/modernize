@@ -2,18 +2,40 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Package {
+	@JsonProperty(value="recommended_package")
 	private String recommendedPackage;
+	
+	@JsonProperty(value="package_description")
 	private String packageDescription;
+	
+	@JsonProperty(value="first_booking_validity_date")
 	private String firstBookingValidityDate;
+	
+	@JsonProperty(value="last_booking_validity_date")
 	private String lastBookingValidityDate;
+	
+	@JsonProperty(value="availability_for_stay_date")
 	private Boolean availabilityForStayDate;
+	
+	@JsonProperty(value="stay_length")
 	private Integer stayLength;
+	
+	@JsonProperty(value="number_park_days")
 	private Integer numberParkDays;
+	
+	@JsonProperty(value="offer_code")
 	private String offerCode;
+	
+	@JsonProperty(value="price_default_room")
 	private Integer priceDefaultRoom;
+	
 	private String currency;
 	private List<Room> rooms;
+	
+	@JsonProperty(value="assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
 	
 	public String getRecommendedPackage() {

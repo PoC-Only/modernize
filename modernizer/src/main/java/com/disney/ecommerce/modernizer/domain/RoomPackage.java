@@ -2,10 +2,16 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RoomPackage {
+	@JsonProperty(value="item_no")
 	private Integer itemNo;
+	@JsonProperty(value="package_code")
 	private String packageCode;
+	@JsonProperty(value="check_in_date")
 	private String checkInDate;
+	@JsonProperty(value="cart_id")
 	private String checkOutDate;
 	private String roomType;
 	private List<Integer> guestId;

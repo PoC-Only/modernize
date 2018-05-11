@@ -2,11 +2,16 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.math.BigDecimal;
 
-public class AddOn {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class AddOn {
+	@JsonProperty(value="addon_code")
 	private String addonCode;
+	@JsonProperty(value="addon_description")
 	private String addonDescription;
+	@JsonProperty(value="addon_price")
 	private BigDecimal addonPrice;
+	@JsonProperty(value="addon_currency")
 	private String addonCurrency;
 	
 	public String getAddonCode() {

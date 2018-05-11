@@ -2,12 +2,19 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Room {
+	@JsonProperty(value="room_package")
 	private String roomName;
+	@JsonProperty(value="room_type")
 	private String roomType;
+	@JsonProperty(value="room_type_category")
 	private String roomTypeCategory;
+	@JsonProperty(value="room_price")
 	private BigDecimal roomPrice;
 	private String currency;
+	@JsonProperty(value="eligible_sell_online")
 	private Boolean eligibleSellOnline;
 	
 	public String getRoomName() {

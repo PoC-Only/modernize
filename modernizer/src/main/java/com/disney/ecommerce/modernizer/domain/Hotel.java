@@ -1,21 +1,54 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Hotel {
+	
+	@JsonProperty(value="hotel_code")
 	private String hotelCode;
+	
 	private Boolean eligibility;
+	
+	@JsonProperty(value="non_eligibility_reason")
 	private Integer nonEligibilityReason;
+	
+	@JsonProperty(value="hotel_name")
 	private String hotelName;
+	
+	@JsonProperty(value="hotel_rating")
 	private String hotelRating;
+	
+	@JsonProperty(value="hotel_status")
 	private String hotelStatus;
+	
+	@JsonProperty(value="hotel_category")
 	private String hotelCategory;
+	
+	@JsonProperty(value="check_in_start_date")
 	private String checkInStartDate;
+	
+	@JsonProperty(value="check_in_end_date")
 	private String checkInEndDate;
+	
+	@JsonProperty(value="check_in_day_of_week")
 	private String checkInDayOfWeek;
+	
+	@JsonProperty(value="btl_before_switch")
 	private Integer btlBeforeSwitch;
+	
+	@JsonProperty(value="btl_switch_hour")
 	private String btlAfterSwitch;
+	
+	@JsonProperty(value="max_party_mix")
 	private Integer maxPartyMix;
+	
+	@JsonProperty(value="max_infants")
 	private Integer maxInfants;
+	
+	@JsonProperty(value="min_los")
 	private Integer minLos;
+	
+	@JsonProperty(value="max_los")
 	private Integer maxLos;
 	
 	public String getHotelCode() {

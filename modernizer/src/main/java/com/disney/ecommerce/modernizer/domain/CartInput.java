@@ -2,10 +2,17 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CartInput {
+	
+	@JsonProperty(value="guest_information")
 	private List<Guest> guestInformation;
+	@JsonProperty(value="room_package")
 	private List<RoomPackage> roomPackage;
+	@JsonProperty(value="transport_package")
 	private List<TransportPackage> transportPackage;
+	@JsonProperty(value="add_ons")
 	private List<CartAddOn> addOns;
 	
 	public List<Guest> getGuestInformation() {

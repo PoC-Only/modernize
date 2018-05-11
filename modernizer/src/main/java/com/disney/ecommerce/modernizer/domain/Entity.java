@@ -2,16 +2,28 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Entity {
+	@JsonProperty(value="entity_code")
 	private String entityCode;
+	@JsonProperty(value="entity_picture")
 	private String entityPicutre;
+	@JsonProperty(value="entity_name")
 	private String entityName;
+	@JsonProperty(value="entity_short_description")
 	private String entityShortDescription;
-	private String description;
+	@JsonProperty(value="entity_description")
+	private String entityDescription;
+	@JsonProperty(value="display_sequence")
 	private Integer displaySequence;
+	@JsonProperty(value="car_wash_image_id")
 	private String carWashImageId;
+	@JsonProperty(value="entity_child_price")
 	private BigDecimal entityChildPrice;
+	@JsonProperty(value="entity_adult_price")
 	private BigDecimal entityAdultPrice;
+	@JsonProperty(value="unique_price")
 	private BigDecimal uniquePrice;
 	private String currency;
 	
@@ -47,12 +59,12 @@ public class Entity {
 		this.entityShortDescription = entityShortDescription;
 	}
 	
-	public String getDescription() {
-		return description;
+	public String getEntityDescription() {
+		return entityDescription;
 	}
 	
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescription(String entityDescription) {
+		this.entityDescription = entityDescription;
 	}
 	
 	public Integer getDisplaySequence() {

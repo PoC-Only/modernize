@@ -3,13 +3,18 @@ package com.disney.ecommerce.modernizer.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CartAddOn {
+	@JsonProperty(value="item_no")
 	private Integer itemNo;
 	private String category;
-	private String AddonCode;
+	@JsonProperty(value="addon_code")
+	private String addonCode;
 	private String name;
 	private BigDecimal price;
 	private List<Inventory> inventory;
+	@JsonProperty(value="guest_ids")
 	private List<Integer> guestIds;
 	public Integer getItemNo() {
 		return itemNo;
@@ -23,11 +28,12 @@ public class CartAddOn {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	
 	public String getAddonCode() {
-		return AddonCode;
+		return addonCode;
 	}
 	public void setAddonCode(String addonCode) {
-		AddonCode = addonCode;
+		this.addonCode = addonCode;
 	}
 	public String getName() {
 		return name;
@@ -53,6 +59,5 @@ public class CartAddOn {
 	public void setGuestIds(List<Integer> guestIds) {
 		this.guestIds = guestIds;
 	}
-	
 	
 }

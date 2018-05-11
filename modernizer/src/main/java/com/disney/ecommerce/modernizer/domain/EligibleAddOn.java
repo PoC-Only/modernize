@@ -2,17 +2,28 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EligibleAddOn {
+	@JsonProperty(value="addon_code")
 	private String addOnCode;
 	private String name;
+	@JsonProperty(value="short_description")
 	private String shortDescription;
+	@JsonProperty(value="specific_description")
 	private String specificInformation;
+	@JsonProperty(value="additional_information")
 	private String additionalInformation;
+	@JsonProperty(value="picture_name")
 	private String pictureName;
+	@JsonProperty(value="category_display_sequence")
 	private String categoryDisplaySequence;
 	private Boolean eligibility;
+	@JsonProperty(value="non_eligibility_reason")
 	private Integer nonEligibilityReason;
+	@JsonProperty(value="adult_price")
 	private BigDecimal adultPrice;
+	@JsonProperty(value="child_prince")
 	private BigDecimal childPrice;
 	private String currency;
 	

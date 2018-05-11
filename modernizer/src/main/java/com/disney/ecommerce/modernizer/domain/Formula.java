@@ -2,19 +2,33 @@ package com.disney.ecommerce.modernizer.domain;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Formula {
+	@JsonProperty(value="formula_code")
 	private String formulaCode;
+	@JsonProperty(value="formula_name")
 	private String formulaName;
+	@JsonProperty(value="formula_picture")
 	private String formulaPicture;
+	@JsonProperty(value="formula_short_description")
 	private String formulaShortDescription;
+	@JsonProperty(value="formula_title_prim")
 	private String formulaTitlePrim;
+	@JsonProperty(value="formula_title_sec")
 	private String formulaTitleSec;
+	@JsonProperty(value="formula_spec_info_primary")
 	private String formulaSpecInfoPrimary;
+	@JsonProperty(value="formula_spec_info_secondary")
 	private String formulaSpecInfoSecondary;
+	@JsonProperty(value="formula_additional_info")
 	private String formulaAdditionalInfo;
+	@JsonProperty(value="formula_child_price")
 	private BigDecimal formulaChildPrice;
+	@JsonProperty(value="formula_adult_price")
 	private BigDecimal formulaAdultPrice;
 	private String currency;
+	@JsonProperty(value="display_sequence")
 	private Integer displaySequence;
 	
 	public String getFormulaCode() {

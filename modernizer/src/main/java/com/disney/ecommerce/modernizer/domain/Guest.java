@@ -1,21 +1,35 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Guest {
+	@JsonProperty(value="guest_id")
 	private Integer guestId;
 	private String title;
 	private String gender;
+	@JsonProperty(value="first_name")
 	private String firstname;
+	@JsonProperty(value="last_name")
 	private	String lastname;
+	@JsonProperty(value="date_birth")
 	private String dateBirth;
+	@JsonProperty(value="advance_passenger_information")
 	private String advancePassengerInformation;
+	@JsonProperty(value="type_of_document")
 	private String typeOfDocument;
+	@JsonProperty(value="document_expirity_date")
 	private	String documentExpirityDate;
+	@JsonProperty(value="document_number")
 	private String documentNumber;
+	@JsonProperty(value="address_line_1")
 	private String addressLine1;
+	@JsonProperty(value="address_line_2")
 	private String addressLine2;
+	@JsonProperty(value="city_name")
 	private String cityName;
 	private String zip;
 	private String country;
+	@JsonProperty(value="phone_number")
 	private String phoneNumber;
 	private String mail;
 	public Integer getGuestId() {

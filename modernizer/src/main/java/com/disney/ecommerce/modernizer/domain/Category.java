@@ -1,9 +1,13 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Category {
-	
+	@JsonProperty(value="pax_type") 
 	private String paxType;
+	@JsonProperty(value="min_age")
 	private Integer minAge;
+	@JsonProperty(value="max_age")
 	private Integer maxAge;
 
 	public String getPaxType() {

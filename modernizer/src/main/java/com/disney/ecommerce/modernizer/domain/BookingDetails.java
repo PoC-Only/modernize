@@ -3,15 +3,26 @@ package com.disney.ecommerce.modernizer.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class BookingDetails {
+	@JsonProperty(value="booking_number")
 	private String bookingNumber;
+	@JsonProperty(value="booking_date")
 	private String bookingDate;
+	@JsonProperty(value="booking_status")
 	private Boolean bookingStatus;
+	@JsonProperty(value="document_delivery_description")
 	private String documentDeliveryDescription;
+	@JsonProperty(value="minimum_depost")
 	private BigDecimal mininumDeposit;
+	@JsonProperty(value="gross_total_amount")
 	private BigDecimal grossTotalAmount;
+	@JsonProperty(value="net_amount")
 	private BigDecimal netAmount;
+	@JsonProperty(value="amount_due")
 	private String amountDue;
+	@JsonProperty(value="guarantee_amount")
 	private String guaranteeAmount;
 	private String currency;
 	private String balanceDueDate;
