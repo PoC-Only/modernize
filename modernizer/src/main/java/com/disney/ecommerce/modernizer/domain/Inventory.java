@@ -3,28 +3,30 @@ package com.disney.ecommerce.modernizer.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Inventory {
+
+	private String code;
 	private String date;
-	private String seating;
-	@JsonProperty(value="class")
-	private String class1;
+	private String details;
 	
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
 	public String getDate() {
 		return date;
 	}
 	public void setDate(String date) {
 		this.date = date;
 	}
-	public String getSeating() {
-		return seating;
+	public String getDetails() {
+		return details;
 	}
-	public void setSeating(String seating) {
-		this.seating = seating;
+	public void setDetails(String details) {
+		this.details = details;
 	}
-	public String getClass1() {
-		return class1;
-	}
-	public void setClass1(String class1) {
-		this.class1 = class1;
-	}
+	
+	
 	
 }

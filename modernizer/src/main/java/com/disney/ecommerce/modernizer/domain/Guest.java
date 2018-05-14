@@ -13,8 +13,6 @@ public class Guest {
 	private	String lastname;
 	@JsonProperty(value="date_birth")
 	private String dateBirth;
-	@JsonProperty(value="advance_passenger_information")
-	private String advancePassengerInformation;
 	@JsonProperty(value="type_of_document")
 	private String typeOfDocument;
 	@JsonProperty(value="document_expirity_date")
@@ -67,12 +65,6 @@ public class Guest {
 	}
 	public void setDateBirth(String dateBirth) {
 		this.dateBirth = dateBirth;
-	}
-	public String getAdvancePassengerInformation() {
-		return advancePassengerInformation;
-	}
-	public void setAdvancePassengerInformation(String advancePassengerInformation) {
-		this.advancePassengerInformation = advancePassengerInformation;
 	}
 	public String getTypeOfDocument() {
 		return typeOfDocument;

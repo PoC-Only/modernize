@@ -14,10 +14,8 @@ public class Booking {
 	private String checkinDate;
 	@JsonProperty(value="checkout_date")
 	private String checkoutDate;
-	@JsonProperty(value="contact_first_name")
-	private String contactFirstname;
-	@JsonProperty(value="contact_last_name")
-	private String contactLastname;
+	@JsonProperty(value="contact_name")
+	private String contactName;
 	@JsonProperty(value="total_party_mix")
 	private Integer totalPartyMix;
 	@JsonProperty(value="booking_status")
@@ -60,17 +58,11 @@ public class Booking {
 	public void setCheckoutDate(String checkoutDate) {
 		this.checkoutDate = checkoutDate;
 	}
-	public String getContactFirstname() {
-		return contactFirstname;
+	public String getContactName() {
+		return contactName;
 	}
-	public void setContactFirstname(String contactFirstname) {
-		this.contactFirstname = contactFirstname;
-	}
-	public String getContactLastname() {
-		return contactLastname;
-	}
-	public void setContactLastname(String contactLastname) {
-		this.contactLastname = contactLastname;
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
 	}
 	public Integer getTotalPartyMix() {
 		return totalPartyMix;

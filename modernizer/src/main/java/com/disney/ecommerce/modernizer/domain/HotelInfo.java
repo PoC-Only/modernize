@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class HotelInfo extends Hotel02{
+public class HotelInfo extends Hotel{
 	@JsonProperty(value="recommended_package")
 	private List<Package> recommendedPackage;
 	
@@ -23,8 +23,5 @@ public class HotelInfo extends Hotel02{
 	public void setAlternativePackage(List<AlternativePackage> alternativePackage) {
 		this.alternativePackage = alternativePackage;
 	}
-	
-	
-	
 	
 }

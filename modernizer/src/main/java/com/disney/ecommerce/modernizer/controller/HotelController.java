@@ -38,7 +38,8 @@ public class HotelController {
 
 	@GetMapping("hotel")
 	public ResponseEntity<?> getAllHotels(@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2, @RequestParam String sales_channel,
+			@RequestHeader(value = "Authorization2", required = false) String auth2, 
+			@RequestParam String sales_channel,
 			@RequestParam(defaultValue = "FR", required = false) String country_code,
 			@RequestParam(defaultValue = "fr", required = false) String language,
 			@RequestParam(required = false) String market, @RequestParam(required = false) String check_in_date,
@@ -68,6 +69,8 @@ public class HotelController {
 	@GetMapping("hotel/package")
 	public ResponseEntity<?> getHotelPackage(@RequestHeader(value = "Authorization") String auth,
 			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+		
+		
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 

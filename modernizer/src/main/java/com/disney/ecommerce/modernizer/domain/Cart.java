@@ -13,11 +13,20 @@ public class Cart {
 	private String creationDate;
 	@JsonProperty(value="cart_status")
 	private Boolean cartStatus;
-	@JsonProperty(value="sales_channel")
-	private String[] salesChannel;
-	private String[] market;
+	@JsonProperty(value="cart_name")
+	private Boolean cartName;
+	@JsonProperty(value="channel_market")
+	private Boolean channelMarket;
+	@JsonProperty(value="country")
+	private Boolean country;
 	@JsonProperty(value="gross_total_amount")
 	private BigDecimal grossTotalAmount;
+	@JsonProperty(value="net_amount")
+	private BigDecimal netAmount;
+	@JsonProperty(value="balance_amount")
+	private BigDecimal balanceAmount;
+	@JsonProperty(value="deposit_amount")
+	private BigDecimal depositAmount;
 	private String[] currency;
 	@JsonProperty(value="guest_information")
 	private List<Guest> guestInformation;
@@ -46,17 +55,24 @@ public class Cart {
 	public void setCartStatus(Boolean cartStatus) {
 		this.cartStatus = cartStatus;
 	}
-	public String[] getSalesChannel() {
-		return salesChannel;
+	
+	public Boolean getCartName() {
+		return cartName;
 	}
-	public void setSalesChannel(String[] salesChannel) {
-		this.salesChannel = salesChannel;
+	public void setCartName(Boolean cartName) {
+		this.cartName = cartName;
 	}
-	public String[] getMarket() {
-		return market;
+	public Boolean getChannelMarket() {
+		return channelMarket;
 	}
-	public void setMarket(String[] market) {
-		this.market = market;
+	public void setChannelMarket(Boolean channelMarket) {
+		this.channelMarket = channelMarket;
+	}
+	public Boolean getCountry() {
+		return country;
+	}
+	public void setCountry(Boolean country) {
+		this.country = country;
 	}
 	public BigDecimal getGrossTotalAmount() {
 		return grossTotalAmount;
@@ -64,12 +80,32 @@ public class Cart {
 	public void setGrossTotalAmount(BigDecimal grossTotalAmount) {
 		this.grossTotalAmount = grossTotalAmount;
 	}
+	
+	public BigDecimal getNetAmount() {
+		return netAmount;
+	}
+	public void setNetAmount(BigDecimal netAmount) {
+		this.netAmount = netAmount;
+	}
+	public BigDecimal getBalanceAmount() {
+		return balanceAmount;
+	}
+	public void setBalanceAmount(BigDecimal balanceAmount) {
+		this.balanceAmount = balanceAmount;
+	}
+	public BigDecimal getDepositAmount() {
+		return depositAmount;
+	}
+	public void setDepositAmount(BigDecimal depositAmount) {
+		this.depositAmount = depositAmount;
+	}
 	public String[] getCurrency() {
 		return currency;
 	}
 	public void setCurrency(String[] currency) {
 		this.currency = currency;
 	}
+	
 	public List<Guest> getGuestInformation() {
 		return guestInformation;
 	}
@@ -94,6 +130,5 @@ public class Cart {
 	public void setAddOns(List<CartAddOn> addOns) {
 		this.addOns = addOns;
 	}
-	
 	
 }

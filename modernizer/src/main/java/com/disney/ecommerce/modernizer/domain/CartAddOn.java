@@ -13,6 +13,8 @@ public class CartAddOn {
 	private String addonCode;
 	private String name;
 	private BigDecimal price;
+	@JsonProperty(value="label_date")
+	private String labelDate;
 	private List<Inventory> inventory;
 	@JsonProperty(value="guest_ids")
 	private List<Integer> guestIds;
@@ -43,6 +45,12 @@ public class CartAddOn {
 	}
 	public BigDecimal getPrice() {
 		return price;
+	}
+	public String getLabelDate() {
+		return labelDate;
+	}
+	public void setLabelDate(String labelDate) {
+		this.labelDate = labelDate;
 	}
 	public void setPrice(BigDecimal price) {
 		this.price = price;

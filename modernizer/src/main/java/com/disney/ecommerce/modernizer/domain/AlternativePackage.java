@@ -6,8 +6,8 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AlternativePackage {
-	@JsonProperty(value="alternative_package")
-	private String alternativePackage;
+	@JsonProperty(value="room_package_code")
+	private String roomPackageCode;
 	@JsonProperty(value="package_description")
 	private String packageDescription;
 	@JsonProperty(value="first_booking_validity_date")
@@ -57,11 +57,12 @@ public class AlternativePackage {
 	private List<Room> rooms;
 	@JsonProperty(value="assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
-	public String getAlternativePackage() {
-		return alternativePackage;
+	
+	public String getRoomPackageCode() {
+		return roomPackageCode;
 	}
-	public void setAlternativePackage(String alternativePackage) {
-		this.alternativePackage = alternativePackage;
+	public void setRoomPackageCode(String roomPackageCode) {
+		this.roomPackageCode = roomPackageCode;
 	}
 	public String getPackageDescription() {
 		return packageDescription;

@@ -6,8 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TransportPackage02 {
-	@JsonProperty(value="item_no")
-	private Integer itemNo;
+
 	@JsonProperty(value="package_code")
 	private String packageCode;
 	@JsonProperty(value="transport_mode")
@@ -19,12 +18,7 @@ public class TransportPackage02 {
 	private List<Integer> guestIds;
 	@JsonProperty(value="assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
-	public Integer getItemNo() {
-		return itemNo;
-	}
-	public void setItemNo(Integer itemNo) {
-		this.itemNo = itemNo;
-	}
+
 	public String getPackageCode() {
 		return packageCode;
 	}

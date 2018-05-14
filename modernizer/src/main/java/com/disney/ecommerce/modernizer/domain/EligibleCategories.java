@@ -10,12 +10,9 @@ public class EligibleCategories {
 	private String name;
 	@JsonProperty(value="diplay_sequence")
 	private Integer displaySequence;
-	@JsonProperty(value="is_displayed")
-	private Boolean isDisplayed;
 	@JsonProperty(value="add_ons")
 	private List<EligibleAddOn> addOns;
 	private List<Entity> entity;
-	private List<Formula> formula;
 	public String getCategoryCode() {
 		return categoryCode;
 	}
@@ -34,12 +31,6 @@ public class EligibleCategories {
 	public void setDisplaySequence(Integer displaySequence) {
 		this.displaySequence = displaySequence;
 	}
-	public Boolean getIsDisplayed() {
-		return isDisplayed;
-	}
-	public void setIsDisplayed(Boolean isDisplayed) {
-		this.isDisplayed = isDisplayed;
-	}
 	public List<EligibleAddOn> getAddOns() {
 		return addOns;
 	}
@@ -51,12 +42,6 @@ public class EligibleCategories {
 	}
 	public void setEntity(List<Entity> entity) {
 		this.entity = entity;
-	}
-	public List<Formula> getFormula() {
-		return formula;
-	}
-	public void setFormula(List<Formula> formula) {
-		this.formula = formula;
 	}
 	
 	

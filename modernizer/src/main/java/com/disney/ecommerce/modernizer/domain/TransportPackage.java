@@ -18,7 +18,7 @@ public class TransportPackage {
 	@JsonProperty(value="guest_ids")
 	private List<Integer> guestIds;
 	@JsonProperty(value="add_ons")
-	private List<AddOn> addOns;
+	private List<AddOn2> addOns;
 	
 	public Integer getItemNo() {
 		return itemNo;
@@ -62,12 +62,14 @@ public class TransportPackage {
 	public void setGuestIds(List<Integer> guestIds) {
 		this.guestIds = guestIds;
 	}
-	public List<AddOn> getAddOns() {
+	public List<AddOn2> getAddOns() {
 		return addOns;
 	}
-	public void setAddOns(List<AddOn> addOns) {
+	public void setAddOns(List<AddOn2> addOns) {
 		this.addOns = addOns;
 	}
+
+	
 	
 	
 }

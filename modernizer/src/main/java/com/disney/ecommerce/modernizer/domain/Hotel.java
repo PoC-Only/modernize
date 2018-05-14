@@ -1,11 +1,16 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Hotel {
 	
 	@JsonProperty(value="hotel_code")
 	private String hotelCode;
+	
+	@JsonProperty(value="group_of_offer")
+	private String groupOfOffer;
 	
 	private Boolean eligibility;
 	
@@ -51,6 +56,9 @@ public class Hotel {
 	@JsonProperty(value="max_los")
 	private Integer maxLos;
 	
+	@JsonProperty(value="special_request")
+	private List<SpecialRequest> specialRequest;
+	
 	public String getHotelCode() {
 		return hotelCode;
 	}
@@ -59,6 +67,14 @@ public class Hotel {
 		this.hotelCode = hotelCode;
 	}
 	
+	public String getGroupOfOffer() {
+		return groupOfOffer;
+	}
+
+	public void setGroupOfOffer(String groupOfOffer) {
+		this.groupOfOffer = groupOfOffer;
+	}
+
 	public Boolean getEligibility() {
 		return eligibility;
 	}
@@ -178,5 +194,15 @@ public class Hotel {
 	public void setMaxLos(Integer maxLos) {
 		this.maxLos = maxLos;
 	}
+
+	public List<SpecialRequest> getSpecialRequest() {
+		return specialRequest;
+	}
+
+	public void setSpecialRequest(List<SpecialRequest> specialRequest) {
+		this.specialRequest = specialRequest;
+	}
+	
+	
 	
 }

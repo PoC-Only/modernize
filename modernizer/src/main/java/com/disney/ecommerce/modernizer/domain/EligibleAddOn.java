@@ -7,6 +7,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EligibleAddOn {
 	@JsonProperty(value="addon_code")
 	private String addOnCode;
+	@JsonProperty(value="entity_code")
+	private String entityCode;
+	@JsonProperty(value="formula_code")
+	private String formulaCode;
+	@JsonProperty(value="label_date")
+	private String labelDate;
 	private String name;
 	@JsonProperty(value="short_description")
 	private String shortDescription;
@@ -14,10 +20,8 @@ public class EligibleAddOn {
 	private String specificInformation;
 	@JsonProperty(value="additional_information")
 	private String additionalInformation;
-	@JsonProperty(value="picture_name")
-	private String pictureName;
-	@JsonProperty(value="category_display_sequence")
-	private String categoryDisplaySequence;
+	@JsonProperty(value="addon_diplay_sequence")
+	private String addonDisplaySequence;
 	private Boolean eligibility;
 	@JsonProperty(value="non_eligibility_reason")
 	private Integer nonEligibilityReason;
@@ -35,6 +39,30 @@ public class EligibleAddOn {
 		this.addOnCode = addOnCode;
 	}
 	
+	public String getEntityCode() {
+		return entityCode;
+	}
+
+	public void setEntityCode(String entityCode) {
+		this.entityCode = entityCode;
+	}
+
+	public String getFormulaCode() {
+		return formulaCode;
+	}
+
+	public void setFormulaCode(String formulaCode) {
+		this.formulaCode = formulaCode;
+	}
+
+	public String getLabelDate() {
+		return labelDate;
+	}
+
+	public void setLabelDate(String labelDate) {
+		this.labelDate = labelDate;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -65,22 +93,6 @@ public class EligibleAddOn {
 	
 	public void setAdditionalInformation(String additionalInformation) {
 		this.additionalInformation = additionalInformation;
-	}
-	
-	public String getPictureName() {
-		return pictureName;
-	}
-	
-	public void setPictureName(String pictureName) {
-		this.pictureName = pictureName;
-	}
-	
-	public String getCategoryDisplaySequence() {
-		return categoryDisplaySequence;
-	}
-	
-	public void setCategoryDisplaySequence(String categoryDisplaySequence) {
-		this.categoryDisplaySequence = categoryDisplaySequence;
 	}
 	
 	public Boolean getEligibility() {

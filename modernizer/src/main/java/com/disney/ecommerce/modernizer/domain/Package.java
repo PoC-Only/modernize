@@ -5,8 +5,8 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Package {
-	@JsonProperty(value="recommended_package")
-	private String recommendedPackage;
+	@JsonProperty(value="room_package_code")
+	private String roomPackageCode;
 	
 	@JsonProperty(value="package_description")
 	private String packageDescription;
@@ -38,14 +38,14 @@ public class Package {
 	@JsonProperty(value="assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
 	
-	public String getRecommendedPackage() {
-		return recommendedPackage;
+	public String getRoomPackageCode() {
+		return roomPackageCode;
 	}
-	
-	public void setRecommendedPackage(String recommendedPackage) {
-		this.recommendedPackage = recommendedPackage;
+
+	public void setRoomPackageCode(String roomPackageCode) {
+		this.roomPackageCode = roomPackageCode;
 	}
-	
+
 	public String getPackageDescription() {
 		return packageDescription;
 	}
