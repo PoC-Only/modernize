@@ -3,10 +3,13 @@ package com.disney.ecommerce.modernizer.domain;
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(NON_NULL)
 public class Token {
+	@JsonProperty(value = "token_2")
 	private String token;
+	@JsonProperty(value = "account_id")
 	private String accountId;
 	private String myDLPHash;
 	private String expiration;

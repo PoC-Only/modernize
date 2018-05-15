@@ -62,7 +62,6 @@ public class HotelController {
 
 			Category cat = new Category();
 			cat.setMaxAge(5);
-			cat.setMinAge(null);
 			cat.setPaxType("Child");
 			
 			return new ResponseEntity<Category>(cat, HttpStatus.OK);
