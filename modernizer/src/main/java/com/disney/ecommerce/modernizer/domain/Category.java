@@ -1,7 +1,11 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
+@JsonInclude(NON_NULL)
 public class Category {
 	@JsonProperty(value = "pax_type")
 	private String paxType;

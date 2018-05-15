@@ -60,7 +60,12 @@ public class HotelController {
 				LOGGER.info("expiration:" + token.getExpiration());
 			}
 
-			return new ResponseEntity<String>("{}", HttpStatus.OK);
+			Category cat = new Category();
+			cat.setMaxAge(5);
+			cat.setMinAge(null);
+			cat.setPaxType("Child");
+			
+			return new ResponseEntity<Category>(cat, HttpStatus.OK);
 		} else {
 			return new ResponseEntity<ErrorMessage>(securityManager.get401Error(), HttpStatus.UNAUTHORIZED);
 		}
