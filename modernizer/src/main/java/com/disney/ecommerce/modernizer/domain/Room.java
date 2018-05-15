@@ -1,9 +1,13 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(NON_NULL)
 public class Room {
 	@JsonProperty(value = "room_package")
 	private String roomName;

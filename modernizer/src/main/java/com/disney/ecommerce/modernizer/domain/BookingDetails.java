@@ -1,10 +1,14 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(NON_NULL)
 public class BookingDetails {
 
 	@JsonProperty(value = "booking_number")
@@ -38,6 +42,16 @@ public class BookingDetails {
 
 	@JsonProperty(value = "balance_due_date")
 	private String balanceDueDate;
+	
+	@JsonProperty(value = "card_holder_name")
+	private String cardHolderName;
+	
+	@JsonProperty(value = "card_number")
+	private String cardNumber;
+	
+	@JsonProperty(value = "authorization_number")
+	private String authorizationNmber;
+	
 
 	@JsonProperty(value = "guest_information")
 	private List<Guest> guestInformation;
@@ -137,6 +151,30 @@ public class BookingDetails {
 
 	public void setBalanceDueDate(String balanceDueDate) {
 		this.balanceDueDate = balanceDueDate;
+	}
+	
+	public String getCardHolderName() {
+		return cardHolderName;
+	}
+
+	public void setCardHolderName(String cardHolderName) {
+		this.cardHolderName = cardHolderName;
+	}
+
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public String getAuthorizationNmber() {
+		return authorizationNmber;
+	}
+
+	public void setAuthorizationNmber(String authorizationNmber) {
+		this.authorizationNmber = authorizationNmber;
 	}
 
 	public List<Guest> getGuestInformation() {

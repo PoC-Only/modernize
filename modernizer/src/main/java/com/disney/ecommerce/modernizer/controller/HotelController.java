@@ -73,7 +73,22 @@ public class HotelController {
 
 	@GetMapping("hotel/package")
 	public ResponseEntity<?> getHotelPackage(@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false) String sales_channel,
+			@RequestParam(defaultValue = "FR", required = false) String country_code,
+			@RequestParam(defaultValue = "fr") String language,
+			@RequestParam(required = false) String channel_market,
+			@RequestParam String unique_id,
+			@RequestParam String check_in_date,
+			@RequestParam String check_out_date, 
+			@RequestParam String number_adults,
+			@RequestParam String number_children,
+			@RequestParam String number_infants,
+			@RequestParam(required = false) List<String> date_birth_child,
+			@RequestParam(required = false) List<String> date_birth_infant,
+			@RequestParam(required = false) String hotel_code, 
+			@RequestParam(required = false) String transport_compatible
+			) {
 		
 		
 		if (securityManager.checkAuthentication(auth, auth2)) {
@@ -89,7 +104,23 @@ public class HotelController {
 	public ResponseEntity<?> getHotelDetails(
 			@ApiParam(required = true) @PathVariable("hotel_code") String hotelCode,
 			@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false) String sales_channel,
+			@RequestParam(defaultValue = "FR", required = false) String country_code,
+			@RequestParam(defaultValue = "fr") String language,
+			@RequestParam(required = false) String channel_market,
+			@RequestParam String unique_id,
+			@RequestParam String check_in_date,
+			@RequestParam String check_out_date, 
+			@RequestParam String number_adults,
+			@RequestParam String number_children,
+			@RequestParam String number_infants,
+			@RequestParam(required = false) List<String> date_birth_child,
+			@RequestParam(required = false) List<String> date_birth_infant,
+			@RequestParam(required = false) String offer_code, 
+			@RequestParam(required = false) String transport_compatible,
+			@RequestParam String hotel_code) {
+		
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 

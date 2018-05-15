@@ -1,5 +1,10 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(NON_NULL)
 public class Token {
 	private String token;
 	private String accountId;

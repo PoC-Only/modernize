@@ -1,10 +1,14 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(NON_NULL)
 public class AlternativePackage {
 	@JsonProperty(value = "room_package_code")
 	private String roomPackageCode;
@@ -21,30 +25,10 @@ public class AlternativePackage {
 	private String hotelName;
 	@JsonProperty(value = "hotel_rating")
 	private String hotelRating;
-	@JsonProperty(value = "hotel_status")
-	private String hotelStatus;
 	@JsonProperty(value = "hotel_category")
 	private String hotelCategory;
-	@JsonProperty(value = "check_in_start_date")
-	private String checkInStartDate;
-	@JsonProperty(value = "check_in_end_date")
-	private String checkInEndDate;
-	@JsonProperty(value = "check_in_day_of_week")
-	private String checkInDayOfWeek;
-	@JsonProperty(value = "btl_before_switch")
-	private Integer btlBeforeSwitch;
-	@JsonProperty(value = "btl_switch_hour")
-	private String btlSwitchHour;
-	@JsonProperty(value = "btl_after_switch")
-	private Integer btlAfterSwitch;
 	@JsonProperty(value = "party_mix_combination")
 	private List<PartyMix> partyMixCombination;
-	@JsonProperty(value = "min_los")
-	private Integer minLos;
-	@JsonProperty(value = "max_los")
-	private Integer maxLos;
-	@JsonProperty(value = "availability_for_stay_date")
-	private Boolean availabilityForStayDate;
 	@JsonProperty(value = "number_park_days")
 	private Integer numberParkDays;
 	@JsonProperty(value = "price_default_room")
@@ -120,14 +104,6 @@ public class AlternativePackage {
 		this.hotelRating = hotelRating;
 	}
 
-	public String getHotelStatus() {
-		return hotelStatus;
-	}
-
-	public void setHotelStatus(String hotelStatus) {
-		this.hotelStatus = hotelStatus;
-	}
-
 	public String getHotelCategory() {
 		return hotelCategory;
 	}
@@ -136,84 +112,13 @@ public class AlternativePackage {
 		this.hotelCategory = hotelCategory;
 	}
 
-	public String getCheckInStartDate() {
-		return checkInStartDate;
-	}
-
-	public void setCheckInStartDate(String checkInStartDate) {
-		this.checkInStartDate = checkInStartDate;
-	}
-
-	public String getCheckInEndDate() {
-		return checkInEndDate;
-	}
-
-	public void setCheckInEndDate(String checkInEndDate) {
-		this.checkInEndDate = checkInEndDate;
-	}
-
-	public String getCheckInDayOfWeek() {
-		return checkInDayOfWeek;
-	}
-
-	public void setCheckInDayOfWeek(String checkInDayOfWeek) {
-		this.checkInDayOfWeek = checkInDayOfWeek;
-	}
-
-	public Integer getBtlBeforeSwitch() {
-		return btlBeforeSwitch;
-	}
-
-	public void setBtlBeforeSwitch(Integer btlBeforeSwitch) {
-		this.btlBeforeSwitch = btlBeforeSwitch;
-	}
-
-	public String getBtlSwitchHour() {
-		return btlSwitchHour;
-	}
-
-	public void setBtlSwitchHour(String btlSwitchHour) {
-		this.btlSwitchHour = btlSwitchHour;
-	}
-
-	public Integer getBtlAfterSwitch() {
-		return btlAfterSwitch;
-	}
-
-	public void setBtlAfterSwitch(Integer btlAfterSwitch) {
-		this.btlAfterSwitch = btlAfterSwitch;
-	}
-
+	
 	public List<PartyMix> getPartyMixCombination() {
 		return partyMixCombination;
 	}
 
 	public void setPartyMixCombination(List<PartyMix> partyMixCombination) {
 		this.partyMixCombination = partyMixCombination;
-	}
-
-	public Integer getMinLos() {
-		return minLos;
-	}
-
-	public void setMinLos(Integer minLos) {
-		this.minLos = minLos;
-	}
-
-	public Integer getMaxLos() {
-		return maxLos;
-	}
-
-	public void setMaxLos(Integer maxLos) {
-		this.maxLos = maxLos;
-	}
-
-	public Boolean getAvailabilityForStayDate() {
-		return availabilityForStayDate;
-	}
-
-	public void setAvailabilityForStayDate(Boolean availabilityForStayDate) {
-		this.availabilityForStayDate = availabilityForStayDate;
 	}
 
 	public Integer getNumberParkDays() {

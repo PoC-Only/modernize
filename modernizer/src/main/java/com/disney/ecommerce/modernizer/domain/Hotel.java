@@ -1,9 +1,13 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(NON_NULL)
 public class Hotel {
 
 	@JsonProperty(value = "hotel_code")
@@ -22,9 +26,6 @@ public class Hotel {
 
 	@JsonProperty(value = "hotel_rating")
 	private String hotelRating;
-
-	@JsonProperty(value = "hotel_status")
-	private String hotelStatus;
 
 	@JsonProperty(value = "hotel_category")
 	private String hotelCategory;
@@ -105,14 +106,6 @@ public class Hotel {
 
 	public void setHotelRating(String hotelRating) {
 		this.hotelRating = hotelRating;
-	}
-
-	public String getHotelStatus() {
-		return hotelStatus;
-	}
-
-	public void setHotelStatus(String hotelStatus) {
-		this.hotelStatus = hotelStatus;
 	}
 
 	public String getHotelCategory() {

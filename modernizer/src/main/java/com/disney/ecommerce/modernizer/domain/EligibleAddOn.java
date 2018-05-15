@@ -1,9 +1,13 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(NON_NULL)
 public class EligibleAddOn {
 	@JsonProperty(value = "addon_code")
 	private String addOnCode;
@@ -30,6 +34,16 @@ public class EligibleAddOn {
 	@JsonProperty(value = "child_prince")
 	private BigDecimal childPrice;
 	private String currency;
+	@JsonProperty(value = "dex_eligible")
+	private Boolean dexEligible;
+	@JsonProperty(value = "outbound_vea_required")
+	private Boolean outboundVeaRequired;
+	@JsonProperty(value = "inbound_vea_required")
+	private Boolean inboundVeaRequired;
+	@JsonProperty(value = "outbound_vea_eligible")
+	private Boolean outboundVeaEligible;
+	@JsonProperty(value = "inbound_vea_eligible")
+	private Boolean inboundVeaEligible;
 
 	public String getAddOnCode() {
 		return addOnCode;
@@ -134,4 +148,54 @@ public class EligibleAddOn {
 	public void setCurrency(String currency) {
 		this.currency = currency;
 	}
+
+	public String getAddonDisplaySequence() {
+		return addonDisplaySequence;
+	}
+
+	public void setAddonDisplaySequence(String addonDisplaySequence) {
+		this.addonDisplaySequence = addonDisplaySequence;
+	}
+
+	public Boolean getDexEligible() {
+		return dexEligible;
+	}
+
+	public void setDexEligible(Boolean dexEligible) {
+		this.dexEligible = dexEligible;
+	}
+
+	public Boolean getOutboundVeaRequired() {
+		return outboundVeaRequired;
+	}
+
+	public void setOutboundVeaRequired(Boolean outboundVeaRequired) {
+		this.outboundVeaRequired = outboundVeaRequired;
+	}
+
+	public Boolean getInboundVeaRequired() {
+		return inboundVeaRequired;
+	}
+
+	public void setInboundVeaRequired(Boolean inboundVeaRequired) {
+		this.inboundVeaRequired = inboundVeaRequired;
+	}
+
+	public Boolean getOutboundVeaEligible() {
+		return outboundVeaEligible;
+	}
+
+	public void setOutboundVeaEligible(Boolean outboundVeaEligible) {
+		this.outboundVeaEligible = outboundVeaEligible;
+	}
+
+	public Boolean getInboundVeaEligible() {
+		return inboundVeaEligible;
+	}
+
+	public void setInboundVeaEligible(Boolean inboundVeaEligible) {
+		this.inboundVeaEligible = inboundVeaEligible;
+	}
+	
+	
 }

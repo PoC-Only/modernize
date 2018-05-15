@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.disney.ecommerce.modernizer.domain.ErrorMessage;
@@ -28,7 +29,15 @@ public class ConfigController {
 
 	@GetMapping("config/partymix")
 	public ResponseEntity<?> getPartyMix(@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false)String sales_channel,
+			@RequestParam(defaultValue = "FR", required = false)String country_code,
+			@RequestParam(defaultValue = "fr")String language,
+			@RequestParam(required = false)String channel_market,
+			@RequestParam String unique_id,
+			@RequestParam(required = false) String vendor_code,
+			@RequestParam(required = false) String checkin_date
+			) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 
@@ -36,5 +45,20 @@ public class ConfigController {
 		} else {
 			return new ResponseEntity<ErrorMessage>(securityManager.get401Error(), HttpStatus.UNAUTHORIZED);
 		}
+	}
+	
+	@GetMapping("config/channelmarket")
+	public ResponseEntity<?> getChannelMarket(@RequestHeader(value = "Authorization") String auth,
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam String sales_channel,
+			@RequestParam(defaultValue = "FR") String country_code,
+			@RequestParam(defaultValue = "fr") String language,
+			@RequestParam String unique_id){
+			if(securityManager.checkAuthentication(auth, auth2)) {
+				
+				return new ResponseEntity<String>("{}", HttpStatus.OK);
+			}else {
+				return new ResponseEntity<ErrorMessage>(securityManager.get401Error(), HttpStatus.UNAUTHORIZED);
+			}
 	}
 }
