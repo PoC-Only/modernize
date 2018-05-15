@@ -1,19 +1,23 @@
 package com.disney.ecommerce.modernizer.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
+@JsonInclude(NON_NULL)
 public class Category {
-	@JsonProperty(value="pax_type") 
+	@JsonProperty(value = "pax_type")
 	private String paxType;
-	@JsonProperty(value="min_age")
+	@JsonProperty(value = "min_age")
 	private Integer minAge;
-	@JsonProperty(value="max_age")
+	@JsonProperty(value = "max_age")
 	private Integer maxAge;
 
 	public String getPaxType() {
 		return paxType;
 	}
-	
+
 	public void setPaxType(String paxType) {
 		this.paxType = paxType;
 	}
@@ -33,5 +37,5 @@ public class Category {
 	public void setMaxAge(Integer maxAge) {
 		this.maxAge = maxAge;
 	}
-		
+
 }
