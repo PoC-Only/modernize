@@ -23,7 +23,8 @@ public class Token {
 	}
 
 	public String getMyDLPHash() {
-		if (myDLPHash==null) myDLPHash = "";
+		if (myDLPHash == null)
+			myDLPHash = "";
 		return myDLPHash;
 	}
 
