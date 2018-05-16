@@ -55,4 +55,11 @@ public class SpecialRequest {
 		this.adjoiningRoomGuestName = adjoiningRoomGuestName;
 	}
 
+	@Override
+	public String toString() {
+		return "SpecialRequest [requestCode=" + requestCode + ", requestDescription=" + requestDescription
+				+ ", adjoiningRoomNumber=" + adjoiningRoomNumber + ", adjoiningRoomGuestName=" + adjoiningRoomGuestName
+				+ "]";
+	}
+
 }

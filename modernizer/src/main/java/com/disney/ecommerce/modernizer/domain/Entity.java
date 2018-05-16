@@ -126,4 +126,13 @@ public class Entity {
 		this.currency = currency;
 	}
 
+	@Override
+	public String toString() {
+		return "Entity [entityCode=" + entityCode + ", entityPicutre=" + entityPicutre + ", entityName=" + entityName
+				+ ", entityShortDescription=" + entityShortDescription + ", entityDescription=" + entityDescription
+				+ ", displaySequence=" + displaySequence + ", carWashImageId=" + carWashImageId + ", entityChildPrice="
+				+ entityChildPrice + ", entityAdultPrice=" + entityAdultPrice + ", uniquePrice=" + uniquePrice
+				+ ", currency=" + currency + "]";
+	}
+
 }

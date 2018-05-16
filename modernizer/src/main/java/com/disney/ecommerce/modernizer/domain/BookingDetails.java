@@ -197,4 +197,17 @@ public class BookingDetails {
 		this.addOns = addOns;
 	}
 
+	@Override
+	public String toString() {
+		return "BookingDetails [bookingNumber=" + bookingNumber + ", bookingDate=" + bookingDate + ", bookingStatus="
+				+ bookingStatus + ", documentDeliveryDescription=" + documentDeliveryDescription + ", mininumDeposit="
+				+ mininumDeposit + ", grossTotalAmount=" + grossTotalAmount + ", netAmount=" + netAmount
+				+ ", amountDue=" + amountDue + ", guaranteeAmount=" + guaranteeAmount + ", currency=" + currency
+				+ ", balanceDueDate=" + balanceDueDate + ", cardHolderName=" + cardHolderName + ", cardNumber="
+				+ cardNumber + ", authorizationNmber=" + authorizationNmber + ", guestInformation=" + guestInformation
+				+ ", roomPackage=" + roomPackage + ", transportPackage=" + transportPackage + ", addOns=" + addOns
+				+ "]";
+	}
+
+	
 }

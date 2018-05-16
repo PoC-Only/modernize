@@ -34,4 +34,11 @@ public class PartyMix {
 	public void setMaxInfants(Integer maxInfants) {
 		this.maxInfants = maxInfants;
 	}
+
+	@Override
+	public String toString() {
+		return "PartyMix [maxPartyMix=" + maxPartyMix + ", maxInfants=" + maxInfants + "]";
+	}
+	
+	
 }

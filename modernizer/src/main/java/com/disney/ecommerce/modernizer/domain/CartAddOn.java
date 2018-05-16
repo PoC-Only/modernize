@@ -94,4 +94,11 @@ public class CartAddOn {
 		this.guestIds = guestIds;
 	}
 
+	@Override
+	public String toString() {
+		return "CartAddOn [itemNo=" + itemNo + ", category=" + category + ", addonCode=" + addonCode + ", name=" + name
+				+ ", price=" + price + ", labelDate=" + labelDate + ", inventory=" + inventory + ", guestIds="
+				+ guestIds + "]";
+	}
+
 }

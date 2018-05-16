@@ -65,4 +65,10 @@ public class EligibleCategory {
 		this.entity = entity;
 	}
 
+	@Override
+	public String toString() {
+		return "EligibleCategory [categoryCode=" + categoryCode + ", name=" + name + ", displaySequence="
+				+ displaySequence + ", addOns=" + addOns + ", entity=" + entity + "]";
+	}
+
 }

@@ -35,5 +35,10 @@ public class ChannelMarket {
 		this.cultureCode = cultureCode;
 	}
 
+	@Override
+	public String toString() {
+		return "ChannelMarket [channelMarket=" + channelMarket + ", cultureCode=" + cultureCode + "]";
+	}
+
 	
 }

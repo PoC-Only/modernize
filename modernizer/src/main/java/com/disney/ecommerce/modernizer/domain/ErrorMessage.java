@@ -27,4 +27,9 @@ public class ErrorMessage {
 		this.error_description = error_description;
 	}
 
+	@Override
+	public String toString() {
+		return "ErrorMessage [error_code=" + error_code + ", error_description=" + error_description + "]";
+	}
+
 }

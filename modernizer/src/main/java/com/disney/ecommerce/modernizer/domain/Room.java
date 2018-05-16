@@ -75,4 +75,13 @@ public class Room {
 	public void setEligibleSellOnline(Boolean eligibleSellOnline) {
 		this.eligibleSellOnline = eligibleSellOnline;
 	}
+
+	@Override
+	public String toString() {
+		return "Room [roomName=" + roomName + ", roomType=" + roomType + ", roomTypeCategory=" + roomTypeCategory
+				+ ", roomPrice=" + roomPrice + ", currency=" + currency + ", eligibleSellOnline=" + eligibleSellOnline
+				+ "]";
+	}
+	
+	
 }

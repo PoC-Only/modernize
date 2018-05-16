@@ -37,4 +37,19 @@ public class HotelInfo extends Hotel {
 		this.alternativePackage = alternativePackage;
 	}
 
+	@Override
+	public String toString() {
+		return "HotelInfo [recommendedPackage=" + recommendedPackage + ", alternativePackage=" + alternativePackage
+				+ ", getHotelCode()=" + getHotelCode() + ", getGroupOfOffer()=" + getGroupOfOffer()
+				+ ", getEligibility()=" + getEligibility() + ", getNonEligibilityReason()=" + getNonEligibilityReason()
+				+ ", getHotelName()=" + getHotelName() + ", getHotelRating()=" + getHotelRating()
+				+ ", getHotelCategory()=" + getHotelCategory() + ", getBtlBeforeSwitch()=" + getBtlBeforeSwitch()
+				+ ", getBtlAfterSwitch()=" + getBtlAfterSwitch() + ", getMaxPartyMix()=" + getMaxPartyMix()
+				+ ", getMaxInfants()=" + getMaxInfants() + ", getMinLos()=" + getMinLos() + ", getMaxLos()="
+				+ getMaxLos() + ", getSpecialRequest()=" + getSpecialRequest() + ", toString()=" + super.toString()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+
+
+
 }

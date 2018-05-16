@@ -135,4 +135,13 @@ public class Transport {
 		this.arrivalHour = arrivalHour;
 	}
 
+	@Override
+	public String toString() {
+		return "Transport [transportaionOfferName=" + transportaionOfferName + ", carrierCode=" + carrierCode
+				+ ", carrierName=" + carrierName + ", flightTrainNumber=" + flightTrainNumber + ", planeTrainType="
+				+ planeTrainType + ", fareClass=" + fareClass + ", serviceClass=" + serviceClass + ", departurePlace="
+				+ departurePlace + ", arrivalPlace=" + arrivalPlace + ", departureDate=" + departureDate
+				+ ", departureHour=" + departureHour + ", arrivalHour=" + arrivalHour + "]";
+	}
+
 }

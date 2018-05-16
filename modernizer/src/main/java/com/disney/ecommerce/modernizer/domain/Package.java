@@ -134,4 +134,15 @@ public class Package {
 	public void setAssumptiveAddOns(List<AddOn> assumptiveAddOns) {
 		this.assumptiveAddOns = assumptiveAddOns;
 	}
+
+	@Override
+	public String toString() {
+		return "Package [roomPackageCode=" + roomPackageCode + ", packageDescription=" + packageDescription
+				+ ", firstBookingValidityDate=" + firstBookingValidityDate + ", lastBookingValidityDate="
+				+ lastBookingValidityDate + ", availabilityForStayDate=" + availabilityForStayDate + ", stayLength="
+				+ stayLength + ", numberParkDays=" + numberParkDays + ", offerCode=" + offerCode + ", priceDefaultRoom="
+				+ priceDefaultRoom + ", currency=" + currency + ", rooms=" + rooms + ", assumptiveAddOns="
+				+ assumptiveAddOns + "]";
+	}
+	
 }

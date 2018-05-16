@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.disney.ecommerce.modernizer.domain.ErrorMessage;
@@ -29,7 +30,28 @@ public class AddOnController {
 
 	@GetMapping("addon")
 	public ResponseEntity<?> getAddOn(@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false) String sales_channel,
+			@RequestParam(required = false) String country_code,
+			@RequestParam(required = false) String language,
+			@RequestParam(required = false) String channel_market,
+			@RequestParam(required = false) String culture_code,
+			@RequestParam String unique_id,
+			@RequestParam String check_in_date,
+			@RequestParam String check_out_date,
+			@RequestParam(required = false) String flight_departure_date,
+			@RequestParam(required = false) String flight_arrival_date,
+			@RequestParam(required = false) String vendor_code,
+			@RequestParam(required = false) String train_departure_date,
+			@RequestParam(required = false) String train_arrival_date,
+			@RequestParam(required = false) String train_destination_city,
+			@RequestParam(required = false) String train_segment_direction,
+			@RequestParam(required = false) String transport_package_code,
+			@RequestParam String hotel_code,
+			@RequestParam(required = false) String room_package_code,
+			@RequestParam(required = false) String room_type,
+			@RequestParam(required = false) String addon_code			
+			) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 

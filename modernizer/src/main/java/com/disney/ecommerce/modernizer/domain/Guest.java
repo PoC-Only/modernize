@@ -207,4 +207,14 @@ public class Guest {
 		this.optin = optin;
 	}
 
+	@Override
+	public String toString() {
+		return "Guest [guestId=" + guestId + ", title=" + title + ", gender=" + gender + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", dateBirth=" + dateBirth + ", typeOfDocument=" + typeOfDocument
+				+ ", documentExpirityDate=" + documentExpirityDate + ", country_delivery_document="
+				+ country_delivery_document + ", documentNumber=" + documentNumber + ", addressLine1=" + addressLine1
+				+ ", addressLine2=" + addressLine2 + ", cityName=" + cityName + ", zip=" + zip + ", country=" + country
+				+ ", phoneNumber=" + phoneNumber + ", mail=" + mail + ", optin=" + optin + "]";
+	}
+
 }

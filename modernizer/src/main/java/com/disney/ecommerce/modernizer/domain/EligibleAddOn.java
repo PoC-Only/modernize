@@ -203,6 +203,18 @@ public class EligibleAddOn {
 	public void setInboundVeaEligible(Boolean inboundVeaEligible) {
 		this.inboundVeaEligible = inboundVeaEligible;
 	}
+
+	@Override
+	public String toString() {
+		return "EligibleAddOn [addOnCode=" + addOnCode + ", entityCode=" + entityCode + ", formulaCode=" + formulaCode
+				+ ", labelDate=" + labelDate + ", name=" + name + ", shortDescription=" + shortDescription
+				+ ", specificInformation=" + specificInformation + ", additionalInformation=" + additionalInformation
+				+ ", addonDisplaySequence=" + addonDisplaySequence + ", eligibility=" + eligibility
+				+ ", nonEligibilityReason=" + nonEligibilityReason + ", adultPrice=" + adultPrice + ", childPrice="
+				+ childPrice + ", currency=" + currency + ", dexEligible=" + dexEligible + ", outboundVeaRequired="
+				+ outboundVeaRequired + ", inboundVeaRequired=" + inboundVeaRequired + ", outboundVeaEligible="
+				+ outboundVeaEligible + ", inboundVeaEligible=" + inboundVeaEligible + "]";
+	}
 	
 	
 }

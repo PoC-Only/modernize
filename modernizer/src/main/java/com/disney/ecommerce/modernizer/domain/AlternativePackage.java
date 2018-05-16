@@ -176,4 +176,16 @@ public class AlternativePackage {
 		this.assumptiveAddOns = assumptiveAddOns;
 	}
 
+	@Override
+	public String toString() {
+		return "AlternativePackage [roomPackageCode=" + roomPackageCode + ", packageDescription=" + packageDescription
+				+ ", firstBookingValidityDate=" + firstBookingValidityDate + ", lastBookingValidityDate="
+				+ lastBookingValidityDate + ", change=" + change + ", hotelCode=" + hotelCode + ", hotelName="
+				+ hotelName + ", hotelRating=" + hotelRating + ", hotelCategory=" + hotelCategory
+				+ ", partyMixCombination=" + partyMixCombination + ", numberParkDays=" + numberParkDays
+				+ ", priceDefaultRoom=" + priceDefaultRoom + ", currency=" + currency + ", deltaPrice=" + deltaPrice
+				+ ", rooms=" + rooms + ", assumptiveAddOns=" + assumptiveAddOns + "]";
+	}
+
+	
 }

@@ -58,4 +58,10 @@ public class CartInput {
 		this.addOns = addOns;
 	}
 
+	@Override
+	public String toString() {
+		return "CartInput [guestInformation=" + guestInformation + ", roomPackage=" + roomPackage
+				+ ", transportPackage=" + transportPackage + ", addOns=" + addOns + "]";
+	}
+
 }

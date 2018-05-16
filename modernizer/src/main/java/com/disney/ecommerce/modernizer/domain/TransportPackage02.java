@@ -85,4 +85,11 @@ public class TransportPackage02 {
 		this.assumptiveAddOns = assumptiveAddOns;
 	}
 
+	@Override
+	public String toString() {
+		return "TransportPackage02 [packageCode=" + packageCode + ", transportMode=" + transportMode + ", price="
+				+ price + ", outbound=" + outbound + ", inbound=" + inbound + ", guestIds=" + guestIds
+				+ ", assumptiveAddOns=" + assumptiveAddOns + "]";
+	}
+
 }

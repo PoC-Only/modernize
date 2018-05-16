@@ -36,4 +36,9 @@ public class Vendor {
 		this.category = category;
 	}
 
+	@Override
+	public String toString() {
+		return "Vendor [vendorCode=" + vendorCode + ", category=" + category + "]";
+	}
+
 }

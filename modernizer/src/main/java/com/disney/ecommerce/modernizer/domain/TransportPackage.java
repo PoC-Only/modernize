@@ -95,4 +95,11 @@ public class TransportPackage {
 		this.addOns = addOns;
 	}
 
+	@Override
+	public String toString() {
+		return "TransportPackage [itemNo=" + itemNo + ", packageCode=" + packageCode + ", transportMode="
+				+ transportMode + ", price=" + price + ", outbound=" + outbound + ", inbound=" + inbound + ", guestIds="
+				+ guestIds + ", addOns=" + addOns + "]";
+	}
+
 }

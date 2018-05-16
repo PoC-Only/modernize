@@ -41,4 +41,9 @@ public class Inventory {
 		this.details = details;
 	}
 
+	@Override
+	public String toString() {
+		return "Inventory [code=" + code + ", date=" + date + ", details=" + details + "]";
+	}
+
 }

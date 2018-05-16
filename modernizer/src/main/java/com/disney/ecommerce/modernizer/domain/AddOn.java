@@ -57,4 +57,10 @@ public class AddOn {
 		this.addonCurrency = addonCurrency;
 	}
 
+	@Override
+	public String toString() {
+		return "AddOn [addonCode=" + addonCode + ", addonDescription=" + addonDescription + ", addonPrice=" + addonPrice
+				+ ", addonCurrency=" + addonCurrency + "]";
+	}
+	
 }

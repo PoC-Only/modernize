@@ -27,4 +27,18 @@ public class HotelPackage extends Hotel {
 		this.recommmendedPackage = recommmendedPackage;
 	}
 
+	@Override
+	public String toString() {
+		return "HotelPackage [recommmendedPackage=" + recommmendedPackage + ", getHotelCode()=" + getHotelCode()
+				+ ", getGroupOfOffer()=" + getGroupOfOffer() + ", getEligibility()=" + getEligibility()
+				+ ", getNonEligibilityReason()=" + getNonEligibilityReason() + ", getHotelName()=" + getHotelName()
+				+ ", getHotelRating()=" + getHotelRating() + ", getHotelCategory()=" + getHotelCategory()
+				+ ", getBtlBeforeSwitch()=" + getBtlBeforeSwitch() + ", getBtlAfterSwitch()=" + getBtlAfterSwitch()
+				+ ", getMaxPartyMix()=" + getMaxPartyMix() + ", getMaxInfants()=" + getMaxInfants() + ", getMinLos()="
+				+ getMinLos() + ", getMaxLos()=" + getMaxLos() + ", getSpecialRequest()=" + getSpecialRequest()
+				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ "]";
+	}
+
+	
 }

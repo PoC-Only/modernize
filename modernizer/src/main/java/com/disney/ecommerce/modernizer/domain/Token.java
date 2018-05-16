@@ -54,4 +54,11 @@ public class Token {
 	public void setExpiration(String expiration) {
 		this.expiration = expiration;
 	}
+
+	@Override
+	public String toString() {
+		return "Token [token=" + token + ", accountId=" + accountId + ", myDLPHash=" + myDLPHash + ", expiration="
+				+ expiration + "]";
+	}
+	
 }

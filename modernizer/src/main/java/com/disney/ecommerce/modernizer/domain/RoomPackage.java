@@ -167,4 +167,15 @@ public class RoomPackage {
 		this.addOns = addOns;
 	}
 
+	@Override
+	public String toString() {
+		return "RoomPackage [itemNo=" + itemNo + ", packageCode=" + packageCode + ", packageName=" + packageName
+				+ ", numberParkDays=" + numberParkDays + ", checkInDate=" + checkInDate + ", checkOutDate="
+				+ checkOutDate + ", hotelCode=" + hotelCode + ", hotelName=" + hotelName + ", firstBookingValidityDate="
+				+ firstBookingValidityDate + ", lastBookingValidityDate=" + lastBookingValidityDate + ", roomType="
+				+ roomType + ", price=" + price + ", specialRequest=" + specialRequest + ", guestId=" + guestId
+				+ ", addOns=" + addOns + "]";
+	}
+
+	
 }

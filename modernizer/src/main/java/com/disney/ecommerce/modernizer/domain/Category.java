@@ -45,4 +45,9 @@ public class Category {
 		this.maxAge = maxAge;
 	}
 
+	@Override
+	public String toString() {
+		return "Category [paxType=" + paxType + ", minAge=" + minAge + ", maxAge=" + maxAge + "]";
+	}
+
 }

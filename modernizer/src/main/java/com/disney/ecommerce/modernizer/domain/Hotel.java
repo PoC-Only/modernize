@@ -158,4 +158,14 @@ public class Hotel {
 		this.specialRequest = specialRequest;
 	}
 
+	@Override
+	public String toString() {
+		return "Hotel [hotelCode=" + hotelCode + ", groupOfOffer=" + groupOfOffer + ", eligibility=" + eligibility
+				+ ", nonEligibilityReason=" + nonEligibilityReason + ", hotelName=" + hotelName + ", hotelRating="
+				+ hotelRating + ", hotelCategory=" + hotelCategory + ", checkInDates=" + checkInDates
+				+ ", btlBeforeSwitch=" + btlBeforeSwitch + ", btlAfterSwitch=" + btlAfterSwitch + ", maxPartyMix="
+				+ maxPartyMix + ", maxInfants=" + maxInfants + ", minLos=" + minLos + ", maxLos=" + maxLos
+				+ ", specialRequest=" + specialRequest + "]";
+	}
+
 }

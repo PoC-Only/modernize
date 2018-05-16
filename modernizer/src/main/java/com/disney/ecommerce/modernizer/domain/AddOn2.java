@@ -54,4 +54,11 @@ public class AddOn2 {
 		this.price = price;
 	}
 
+	@Override
+	public String toString() {
+		return "AddOn2 [category=" + category + ", addOnCode=" + addOnCode + ", name=" + name + ", price=" + price
+				+ "]";
+	}
+
+	
 }

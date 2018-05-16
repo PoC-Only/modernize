@@ -20,4 +20,35 @@ public class CheckInDate {
 	private String checkInEndDate;
 	@JsonProperty(value = "check_in_day_of_week")
 	private String checkInDayOfWeek;
+
+	public String getCheckInStartDate() {
+		return checkInStartDate;
+	}
+
+	public void setCheckInStartDate(String checkInStartDate) {
+		this.checkInStartDate = checkInStartDate;
+	}
+
+	public String getCheckInEndDate() {
+		return checkInEndDate;
+	}
+
+	public void setCheckInEndDate(String checkInEndDate) {
+		this.checkInEndDate = checkInEndDate;
+	}
+
+	public String getCheckInDayOfWeek() {
+		return checkInDayOfWeek;
+	}
+
+	public void setCheckInDayOfWeek(String checkInDayOfWeek) {
+		this.checkInDayOfWeek = checkInDayOfWeek;
+	}
+
+	@Override
+	public String toString() {
+		return "CheckInDate [checkInStartDate=" + checkInStartDate + ", checkInEndDate=" + checkInEndDate
+				+ ", checkInDayOfWeek=" + checkInDayOfWeek + "]";
+	}
+
 }

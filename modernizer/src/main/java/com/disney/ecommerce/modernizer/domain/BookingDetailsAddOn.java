@@ -64,4 +64,11 @@ public class BookingDetailsAddOn {
 		this.inventory = inventory;
 	}
 
+	@Override
+	public String toString() {
+		return "BookingDetailsAddOn [category=" + category + ", addonCode=" + addonCode + ", name=" + name + ", price="
+				+ price + ", inventory=" + inventory + "]";
+	}
+
+	
 }

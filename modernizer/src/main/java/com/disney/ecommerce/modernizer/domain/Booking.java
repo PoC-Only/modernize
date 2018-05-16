@@ -114,4 +114,12 @@ public class Booking {
 		this.pastCheckinDateFlag = pastCheckinDateFlag;
 	}
 
+	@Override
+	public String toString() {
+		return "Booking [salesChannel=" + salesChannel + ", market=" + market + ", bookingNumber=" + bookingNumber
+				+ ", bookingDate=" + bookingDate + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
+				+ ", contactName=" + contactName + ", totalPartyMix=" + totalPartyMix + ", bookingStatus="
+				+ bookingStatus + ", pastCheckinDateFlag=" + pastCheckinDateFlag + "]";
+	}
+
 }
