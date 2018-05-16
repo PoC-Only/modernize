@@ -22,10 +22,6 @@ public class Transport {
 	private String carrierName;
 	@JsonProperty(value = "flight_train_number")
 	private String flightTrainNumber;
-	@JsonProperty(value = "isDirect")
-	private Boolean isDirect;
-	@JsonProperty(value = "transportation_offer_details")
-	private String transportationOfferDetails;
 	@JsonProperty(value = "plane_train_type")
 	private String planeTrainType;
 	@JsonProperty(value = "fare_class")
@@ -73,22 +69,6 @@ public class Transport {
 
 	public void setFlightTrainNumber(String flightTrainNumber) {
 		this.flightTrainNumber = flightTrainNumber;
-	}
-
-	public Boolean getIsDirect() {
-		return isDirect;
-	}
-
-	public void setIsDirect(Boolean isDirect) {
-		this.isDirect = isDirect;
-	}
-
-	public String getTransportationOfferDetails() {
-		return transportationOfferDetails;
-	}
-
-	public void setTransportationOfferDetails(String transportationOfferDetails) {
-		this.transportationOfferDetails = transportationOfferDetails;
 	}
 
 	public String getPlaneTrainType() {

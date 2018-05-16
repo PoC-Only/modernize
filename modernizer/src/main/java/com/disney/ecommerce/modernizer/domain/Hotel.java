@@ -29,12 +29,8 @@ public class Hotel {
 	private String hotelRating;
 	@JsonProperty(value = "hotel_category")
 	private String hotelCategory;
-	@JsonProperty(value = "check_in_start_date")
-	private String checkInStartDate;
-	@JsonProperty(value = "check_in_end_date")
-	private String checkInEndDate;
-	@JsonProperty(value = "check_in_day_of_week")
-	private String checkInDayOfWeek;
+	@JsonProperty(value = "check_in_dates")
+	private List<CheckInDate> checkInDates;
 	@JsonProperty(value = "btl_before_switch")
 	private Integer btlBeforeSwitch;
 	@JsonProperty(value = "btl_after_switch")
@@ -104,30 +100,6 @@ public class Hotel {
 
 	public void setHotelCategory(String hotelCategory) {
 		this.hotelCategory = hotelCategory;
-	}
-
-	public String getCheckInStartDate() {
-		return checkInStartDate;
-	}
-
-	public void setCheckInStartDate(String checkInStartDate) {
-		this.checkInStartDate = checkInStartDate;
-	}
-
-	public String getCheckInEndDate() {
-		return checkInEndDate;
-	}
-
-	public void setCheckInEndDate(String checkInEndDate) {
-		this.checkInEndDate = checkInEndDate;
-	}
-
-	public String getCheckInDayOfWeek() {
-		return checkInDayOfWeek;
-	}
-
-	public void setCheckInDayOfWeek(String checkInDayOfWeek) {
-		this.checkInDayOfWeek = checkInDayOfWeek;
 	}
 
 	public Integer getBtlBeforeSwitch() {

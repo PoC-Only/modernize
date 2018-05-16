@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Domain class for EligibleCategories
+ * Domain class for EligibleCategory
  *
  * @author Carl de Jesus
  * @version 1.0
  * @since 2018-05-16
  */
 @JsonInclude(NON_NULL)
-public class EligibleCategories {
+public class EligibleCategory {
 	@JsonProperty(value = "category_code")
 	private String categoryCode;
 	private String name;
