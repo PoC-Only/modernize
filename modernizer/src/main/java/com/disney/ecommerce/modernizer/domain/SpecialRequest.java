@@ -5,9 +5,15 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for SpecialRequest
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class SpecialRequest {
-
 	@JsonProperty(value = "request_code")
 	private String requestCode;
 	@JsonProperty(value = "request_description")

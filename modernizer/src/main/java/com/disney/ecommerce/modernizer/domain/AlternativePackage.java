@@ -8,6 +8,13 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for AlternativePackage
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class AlternativePackage {
 	@JsonProperty(value = "room_package_code")

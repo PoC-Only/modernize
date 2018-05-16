@@ -8,9 +8,15 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Cart
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Cart {
-
 	@JsonProperty(value = "cart_id")
 	private Integer cartId;
 	@JsonProperty(value = "creation_date")

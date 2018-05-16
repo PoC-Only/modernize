@@ -8,60 +8,48 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for BookingDetails
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class BookingDetails {
-
 	@JsonProperty(value = "booking_number")
 	private String bookingNumber;
-
 	@JsonProperty(value = "booking_date")
 	private String bookingDate;
-
 	@JsonProperty(value = "booking_status")
 	private Boolean bookingStatus;
-
 	@JsonProperty(value = "document_delivery_description")
 	private String documentDeliveryDescription;
-
 	@JsonProperty(value = "minimum_depost")
 	private BigDecimal mininumDeposit;
-
 	@JsonProperty(value = "gross_total_amount")
 	private BigDecimal grossTotalAmount;
-
-	@JsonProperty(value = "net_amount")
+	@JsonProperty(value = "net_amount_paid")
 	private BigDecimal netAmount;
-
 	@JsonProperty(value = "amount_due")
 	private String amountDue;
-
 	@JsonProperty(value = "guarantee_amount")
 	private String guaranteeAmount;
-
 	private String currency;
-
 	@JsonProperty(value = "balance_due_date")
 	private String balanceDueDate;
-	
 	@JsonProperty(value = "card_holder_name")
 	private String cardHolderName;
-	
 	@JsonProperty(value = "card_number")
 	private String cardNumber;
-	
 	@JsonProperty(value = "authorization_number")
 	private String authorizationNmber;
-	
-
 	@JsonProperty(value = "guest_information")
 	private List<Guest> guestInformation;
-
 	@JsonProperty(value = "room_package")
 	private List<RoomPackage> roomPackage;
-
 	@JsonProperty(value = "transport_package")
 	private List<TransportPackage02> transportPackage;
-
 	@JsonProperty(value = "add_ons")
 	private List<BookingDetailsAddOn> addOns;
 

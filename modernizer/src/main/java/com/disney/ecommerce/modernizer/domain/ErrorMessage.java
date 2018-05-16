@@ -1,5 +1,12 @@
 package com.disney.ecommerce.modernizer.domain;
 
+/**
+ * Domain class for ErrorMessage
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 public class ErrorMessage {
 	private String error_code;
 	private String error_description;

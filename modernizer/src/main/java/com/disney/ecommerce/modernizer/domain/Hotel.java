@@ -7,56 +7,46 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Hotel
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Hotel {
-
 	@JsonProperty(value = "hotel_code")
 	private String hotelCode;
-
 	@JsonProperty(value = "group_of_offer")
 	private String groupOfOffer;
-
 	private Boolean eligibility;
-
 	@JsonProperty(value = "non_eligibility_reason")
 	private Integer nonEligibilityReason;
-
 	@JsonProperty(value = "hotel_name")
 	private String hotelName;
-
 	@JsonProperty(value = "hotel_rating")
 	private String hotelRating;
-
 	@JsonProperty(value = "hotel_category")
 	private String hotelCategory;
-
 	@JsonProperty(value = "check_in_start_date")
 	private String checkInStartDate;
-
 	@JsonProperty(value = "check_in_end_date")
 	private String checkInEndDate;
-
 	@JsonProperty(value = "check_in_day_of_week")
 	private String checkInDayOfWeek;
-
 	@JsonProperty(value = "btl_before_switch")
 	private Integer btlBeforeSwitch;
-
 	@JsonProperty(value = "btl_after_switch")
 	private String btlAfterSwitch;
-
 	@JsonProperty(value = "max_party_mix")
 	private Integer maxPartyMix;
-
 	@JsonProperty(value = "max_infants")
 	private Integer maxInfants;
-
 	@JsonProperty(value = "min_los")
 	private Integer minLos;
-
 	@JsonProperty(value = "max_los")
 	private Integer maxLos;
-
 	@JsonProperty(value = "special_request")
 	private List<SpecialRequest> specialRequest;
 
