@@ -8,10 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.disney.ecommerce.modernizer.domain.CartInput;
 import com.disney.ecommerce.modernizer.domain.ErrorMessage;
 import com.disney.ecommerce.modernizer.security.ISecurityManager;
 
@@ -66,7 +68,9 @@ public class CartController {
 			@RequestParam(required = false)String culture_code,
 			@RequestParam String unique_id,
 			@RequestParam(required = false) String ta_code,
-			@RequestParam(required = false) String mydlp_id) {
+			@RequestParam(required = false) String mydlp_id,
+			@RequestBody CartInput cartInput)
+	{
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 
@@ -88,7 +92,8 @@ public class CartController {
 			@RequestParam(required = false)String culture_code,
 			@RequestParam String unique_id,
 			@RequestParam(required = false) String ta_code,
-			@RequestParam(required = false) String mydlp_id) {
+			@RequestParam(required = false) String mydlp_id,
+			@RequestBody CartInput cartInput) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 
