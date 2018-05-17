@@ -7,6 +7,13 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for CartInput
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class CartInput {
 
@@ -49,6 +56,12 @@ public class CartInput {
 
 	public void setAddOns(List<CartAddOn> addOns) {
 		this.addOns = addOns;
+	}
+
+	@Override
+	public String toString() {
+		return "CartInput [guestInformation=" + guestInformation + ", roomPackage=" + roomPackage
+				+ ", transportPackage=" + transportPackage + ", addOns=" + addOns + "]";
 	}
 
 }

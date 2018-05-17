@@ -8,6 +8,13 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for CartAddOn
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class CartAddOn {
 	@JsonProperty(value = "item_no")
@@ -85,6 +92,13 @@ public class CartAddOn {
 
 	public void setGuestIds(List<Integer> guestIds) {
 		this.guestIds = guestIds;
+	}
+
+	@Override
+	public String toString() {
+		return "CartAddOn [itemNo=" + itemNo + ", category=" + category + ", addonCode=" + addonCode + ", name=" + name
+				+ ", price=" + price + ", labelDate=" + labelDate + ", inventory=" + inventory + ", guestIds="
+				+ guestIds + "]";
 	}
 
 }

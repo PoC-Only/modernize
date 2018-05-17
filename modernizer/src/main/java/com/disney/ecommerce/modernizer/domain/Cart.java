@@ -3,14 +3,21 @@ package com.disney.ecommerce.modernizer.domain;
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Cart
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Cart {
-
 	@JsonProperty(value = "cart_id")
 	private Integer cartId;
 	@JsonProperty(value = "creation_date")
@@ -159,6 +166,16 @@ public class Cart {
 
 	public void setAddOns(List<CartAddOn> addOns) {
 		this.addOns = addOns;
+	}
+
+	@Override
+	public String toString() {
+		return "Cart [cartId=" + cartId + ", creationDate=" + creationDate + ", cartStatus=" + cartStatus
+				+ ", cartName=" + cartName + ", channelMarket=" + channelMarket + ", country=" + country
+				+ ", grossTotalAmount=" + grossTotalAmount + ", netAmount=" + netAmount + ", balanceAmount="
+				+ balanceAmount + ", depositAmount=" + depositAmount + ", currency=" + Arrays.toString(currency)
+				+ ", guestInformation=" + guestInformation + ", roomPackage=" + roomPackage + ", transportPackage="
+				+ transportPackage + ", addOns=" + addOns + "]";
 	}
 
 }

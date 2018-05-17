@@ -7,6 +7,13 @@ import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Entity
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Entity {
 	@JsonProperty(value = "entity_code")
@@ -117,6 +124,15 @@ public class Entity {
 
 	public void setCurrency(String currency) {
 		this.currency = currency;
+	}
+
+	@Override
+	public String toString() {
+		return "Entity [entityCode=" + entityCode + ", entityPicutre=" + entityPicutre + ", entityName=" + entityName
+				+ ", entityShortDescription=" + entityShortDescription + ", entityDescription=" + entityDescription
+				+ ", displaySequence=" + displaySequence + ", carWashImageId=" + carWashImageId + ", entityChildPrice="
+				+ entityChildPrice + ", entityAdultPrice=" + entityAdultPrice + ", uniquePrice=" + uniquePrice
+				+ ", currency=" + currency + "]";
 	}
 
 }

@@ -7,6 +7,13 @@ import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for AddOn
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class AddOn {
 	@JsonProperty(value = "addon_code")
@@ -50,4 +57,10 @@ public class AddOn {
 		this.addonCurrency = addonCurrency;
 	}
 
+	@Override
+	public String toString() {
+		return "AddOn [addonCode=" + addonCode + ", addonDescription=" + addonDescription + ", addonPrice=" + addonPrice
+				+ ", addonCurrency=" + addonCurrency + "]";
+	}
+	
 }

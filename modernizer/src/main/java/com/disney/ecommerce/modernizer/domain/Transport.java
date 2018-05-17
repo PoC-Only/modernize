@@ -5,6 +5,13 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Transport
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Transport {
 	@JsonProperty(value = "transportation_offer_name")
@@ -15,10 +22,6 @@ public class Transport {
 	private String carrierName;
 	@JsonProperty(value = "flight_train_number")
 	private String flightTrainNumber;
-	@JsonProperty(value = "isDirect")
-	private Boolean isDirect;
-	@JsonProperty(value = "transportation_offer_details")
-	private String transportationOfferDetails;
 	@JsonProperty(value = "plane_train_type")
 	private String planeTrainType;
 	@JsonProperty(value = "fare_class")
@@ -66,22 +69,6 @@ public class Transport {
 
 	public void setFlightTrainNumber(String flightTrainNumber) {
 		this.flightTrainNumber = flightTrainNumber;
-	}
-
-	public Boolean getIsDirect() {
-		return isDirect;
-	}
-
-	public void setIsDirect(Boolean isDirect) {
-		this.isDirect = isDirect;
-	}
-
-	public String getTransportationOfferDetails() {
-		return transportationOfferDetails;
-	}
-
-	public void setTransportationOfferDetails(String transportationOfferDetails) {
-		this.transportationOfferDetails = transportationOfferDetails;
 	}
 
 	public String getPlaneTrainType() {
@@ -146,6 +133,15 @@ public class Transport {
 
 	public void setArrivalHour(String arrivalHour) {
 		this.arrivalHour = arrivalHour;
+	}
+
+	@Override
+	public String toString() {
+		return "Transport [transportaionOfferName=" + transportaionOfferName + ", carrierCode=" + carrierCode
+				+ ", carrierName=" + carrierName + ", flightTrainNumber=" + flightTrainNumber + ", planeTrainType="
+				+ planeTrainType + ", fareClass=" + fareClass + ", serviceClass=" + serviceClass + ", departurePlace="
+				+ departurePlace + ", arrivalPlace=" + arrivalPlace + ", departureDate=" + departureDate
+				+ ", departureHour=" + departureHour + ", arrivalHour=" + arrivalHour + "]";
 	}
 
 }

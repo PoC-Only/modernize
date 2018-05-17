@@ -7,38 +7,35 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Package
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Package {
 	@JsonProperty(value = "room_package_code")
 	private String roomPackageCode;
-
 	@JsonProperty(value = "package_description")
 	private String packageDescription;
-
 	@JsonProperty(value = "first_booking_validity_date")
 	private String firstBookingValidityDate;
-
 	@JsonProperty(value = "last_booking_validity_date")
 	private String lastBookingValidityDate;
-
 	@JsonProperty(value = "availability_for_stay_date")
 	private Boolean availabilityForStayDate;
-
 	@JsonProperty(value = "stay_length")
 	private Integer stayLength;
-
 	@JsonProperty(value = "number_park_days")
 	private Integer numberParkDays;
-
 	@JsonProperty(value = "offer_code")
 	private String offerCode;
-
 	@JsonProperty(value = "price_default_room")
 	private Integer priceDefaultRoom;
-
 	private String currency;
 	private List<Room> rooms;
-
 	@JsonProperty(value = "assumptive_add_ons")
 	private List<AddOn> assumptiveAddOns;
 
@@ -137,4 +134,15 @@ public class Package {
 	public void setAssumptiveAddOns(List<AddOn> assumptiveAddOns) {
 		this.assumptiveAddOns = assumptiveAddOns;
 	}
+
+	@Override
+	public String toString() {
+		return "Package [roomPackageCode=" + roomPackageCode + ", packageDescription=" + packageDescription
+				+ ", firstBookingValidityDate=" + firstBookingValidityDate + ", lastBookingValidityDate="
+				+ lastBookingValidityDate + ", availabilityForStayDate=" + availabilityForStayDate + ", stayLength="
+				+ stayLength + ", numberParkDays=" + numberParkDays + ", offerCode=" + offerCode + ", priceDefaultRoom="
+				+ priceDefaultRoom + ", currency=" + currency + ", rooms=" + rooms + ", assumptiveAddOns="
+				+ assumptiveAddOns + "]";
+	}
+	
 }

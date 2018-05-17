@@ -5,6 +5,13 @@ import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Booking
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Booking {
 	@JsonProperty(value = "sales_channel")
@@ -105,6 +112,14 @@ public class Booking {
 
 	public void setPastCheckinDateFlag(Boolean pastCheckinDateFlag) {
 		this.pastCheckinDateFlag = pastCheckinDateFlag;
+	}
+
+	@Override
+	public String toString() {
+		return "Booking [salesChannel=" + salesChannel + ", market=" + market + ", bookingNumber=" + bookingNumber
+				+ ", bookingDate=" + bookingDate + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
+				+ ", contactName=" + contactName + ", totalPartyMix=" + totalPartyMix + ", bookingStatus="
+				+ bookingStatus + ", pastCheckinDateFlag=" + pastCheckinDateFlag + "]";
 	}
 
 }

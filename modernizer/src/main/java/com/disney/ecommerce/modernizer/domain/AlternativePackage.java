@@ -8,6 +8,13 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for AlternativePackage
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class AlternativePackage {
 	@JsonProperty(value = "room_package_code")
@@ -169,4 +176,16 @@ public class AlternativePackage {
 		this.assumptiveAddOns = assumptiveAddOns;
 	}
 
+	@Override
+	public String toString() {
+		return "AlternativePackage [roomPackageCode=" + roomPackageCode + ", packageDescription=" + packageDescription
+				+ ", firstBookingValidityDate=" + firstBookingValidityDate + ", lastBookingValidityDate="
+				+ lastBookingValidityDate + ", change=" + change + ", hotelCode=" + hotelCode + ", hotelName="
+				+ hotelName + ", hotelRating=" + hotelRating + ", hotelCategory=" + hotelCategory
+				+ ", partyMixCombination=" + partyMixCombination + ", numberParkDays=" + numberParkDays
+				+ ", priceDefaultRoom=" + priceDefaultRoom + ", currency=" + currency + ", deltaPrice=" + deltaPrice
+				+ ", rooms=" + rooms + ", assumptiveAddOns=" + assumptiveAddOns + "]";
+	}
+
+	
 }

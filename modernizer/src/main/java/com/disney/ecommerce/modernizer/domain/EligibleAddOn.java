@@ -7,6 +7,13 @@ import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for EligibleAddOn
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class EligibleAddOn {
 	@JsonProperty(value = "addon_code")
@@ -195,6 +202,18 @@ public class EligibleAddOn {
 
 	public void setInboundVeaEligible(Boolean inboundVeaEligible) {
 		this.inboundVeaEligible = inboundVeaEligible;
+	}
+
+	@Override
+	public String toString() {
+		return "EligibleAddOn [addOnCode=" + addOnCode + ", entityCode=" + entityCode + ", formulaCode=" + formulaCode
+				+ ", labelDate=" + labelDate + ", name=" + name + ", shortDescription=" + shortDescription
+				+ ", specificInformation=" + specificInformation + ", additionalInformation=" + additionalInformation
+				+ ", addonDisplaySequence=" + addonDisplaySequence + ", eligibility=" + eligibility
+				+ ", nonEligibilityReason=" + nonEligibilityReason + ", adultPrice=" + adultPrice + ", childPrice="
+				+ childPrice + ", currency=" + currency + ", dexEligible=" + dexEligible + ", outboundVeaRequired="
+				+ outboundVeaRequired + ", inboundVeaRequired=" + inboundVeaRequired + ", outboundVeaEligible="
+				+ outboundVeaEligible + ", inboundVeaEligible=" + inboundVeaEligible + "]";
 	}
 	
 	

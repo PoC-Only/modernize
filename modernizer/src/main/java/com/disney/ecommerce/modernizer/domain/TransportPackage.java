@@ -8,6 +8,13 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for TransportPackage
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class TransportPackage {
 	@JsonProperty(value = "item_no")
@@ -86,6 +93,13 @@ public class TransportPackage {
 
 	public void setAddOns(List<AddOn2> addOns) {
 		this.addOns = addOns;
+	}
+
+	@Override
+	public String toString() {
+		return "TransportPackage [itemNo=" + itemNo + ", packageCode=" + packageCode + ", transportMode="
+				+ transportMode + ", price=" + price + ", outbound=" + outbound + ", inbound=" + inbound + ", guestIds="
+				+ guestIds + ", addOns=" + addOns + "]";
 	}
 
 }

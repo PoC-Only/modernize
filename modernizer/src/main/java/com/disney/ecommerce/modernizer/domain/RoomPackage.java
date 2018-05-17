@@ -8,6 +8,13 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for RoomPackage
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class RoomPackage {
 	@JsonProperty(value = "item_no")
@@ -160,4 +167,15 @@ public class RoomPackage {
 		this.addOns = addOns;
 	}
 
+	@Override
+	public String toString() {
+		return "RoomPackage [itemNo=" + itemNo + ", packageCode=" + packageCode + ", packageName=" + packageName
+				+ ", numberParkDays=" + numberParkDays + ", checkInDate=" + checkInDate + ", checkOutDate="
+				+ checkOutDate + ", hotelCode=" + hotelCode + ", hotelName=" + hotelName + ", firstBookingValidityDate="
+				+ firstBookingValidityDate + ", lastBookingValidityDate=" + lastBookingValidityDate + ", roomType="
+				+ roomType + ", price=" + price + ", specialRequest=" + specialRequest + ", guestId=" + guestId
+				+ ", addOns=" + addOns + "]";
+	}
+
+	
 }

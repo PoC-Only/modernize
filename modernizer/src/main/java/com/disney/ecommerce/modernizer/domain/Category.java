@@ -5,6 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
+/**
+ * Domain class for Category
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Category {
 	@JsonProperty(value = "pax_type")
@@ -36,6 +43,11 @@ public class Category {
 
 	public void setMaxAge(Integer maxAge) {
 		this.maxAge = maxAge;
+	}
+
+	@Override
+	public String toString() {
+		return "Category [paxType=" + paxType + ", minAge=" + minAge + ", maxAge=" + maxAge + "]";
 	}
 
 }

@@ -7,12 +7,19 @@ import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for AddOn2
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class AddOn2 {
-	private String category;
-	@JsonProperty(value = "addon_code")
-	private String addOnCode;
-	private String name;
+	private String category;	
+	@JsonProperty(value = "addon_code")	
+	private String addOnCode;		
+	private String name;	
 	private BigDecimal price;
 
 	public String getCategory() {
@@ -47,4 +54,11 @@ public class AddOn2 {
 		this.price = price;
 	}
 
+	@Override
+	public String toString() {
+		return "AddOn2 [category=" + category + ", addOnCode=" + addOnCode + ", name=" + name + ", price=" + price
+				+ "]";
+	}
+
+	
 }

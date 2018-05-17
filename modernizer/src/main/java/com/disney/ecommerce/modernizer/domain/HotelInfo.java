@@ -7,11 +7,17 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for HotelInfo
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class HotelInfo extends Hotel {
 	@JsonProperty(value = "recommended_package")
 	private List<Package> recommendedPackage;
-
 	@JsonProperty(value = "alternative_package")
 	private List<AlternativePackage> alternativePackage;
 
@@ -30,5 +36,20 @@ public class HotelInfo extends Hotel {
 	public void setAlternativePackage(List<AlternativePackage> alternativePackage) {
 		this.alternativePackage = alternativePackage;
 	}
+
+	@Override
+	public String toString() {
+		return "HotelInfo [recommendedPackage=" + recommendedPackage + ", alternativePackage=" + alternativePackage
+				+ ", getHotelCode()=" + getHotelCode() + ", getGroupOfOffer()=" + getGroupOfOffer()
+				+ ", getEligibility()=" + getEligibility() + ", getNonEligibilityReason()=" + getNonEligibilityReason()
+				+ ", getHotelName()=" + getHotelName() + ", getHotelRating()=" + getHotelRating()
+				+ ", getHotelCategory()=" + getHotelCategory() + ", getBtlBeforeSwitch()=" + getBtlBeforeSwitch()
+				+ ", getBtlAfterSwitch()=" + getBtlAfterSwitch() + ", getMaxPartyMix()=" + getMaxPartyMix()
+				+ ", getMaxInfants()=" + getMaxInfants() + ", getMinLos()=" + getMinLos() + ", getMaxLos()="
+				+ getMaxLos() + ", getSpecialRequest()=" + getSpecialRequest() + ", toString()=" + super.toString()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+
+
 
 }

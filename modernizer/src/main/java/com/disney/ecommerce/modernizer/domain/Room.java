@@ -7,6 +7,13 @@ import java.math.BigDecimal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Domain class for Room
+ *
+ * @author Carl de Jesus
+ * @version 1.0
+ * @since 2018-05-16
+ */
 @JsonInclude(NON_NULL)
 public class Room {
 	@JsonProperty(value = "room_package")
@@ -68,4 +75,13 @@ public class Room {
 	public void setEligibleSellOnline(Boolean eligibleSellOnline) {
 		this.eligibleSellOnline = eligibleSellOnline;
 	}
+
+	@Override
+	public String toString() {
+		return "Room [roomName=" + roomName + ", roomType=" + roomType + ", roomTypeCategory=" + roomTypeCategory
+				+ ", roomPrice=" + roomPrice + ", currency=" + currency + ", eligibleSellOnline=" + eligibleSellOnline
+				+ "]";
+	}
+	
+	
 }

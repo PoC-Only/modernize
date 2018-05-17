@@ -31,9 +31,10 @@ public class ConfigController {
 	public ResponseEntity<?> getPartyMix(@RequestHeader(value = "Authorization") String auth,
 			@RequestHeader(value = "Authorization2", required = false) String auth2,
 			@RequestParam(required = false)String sales_channel,
-			@RequestParam(defaultValue = "FR", required = false)String country_code,
-			@RequestParam(defaultValue = "fr")String language,
+			@RequestParam(required = false)String country_code,
+			@RequestParam(required = false)String language,
 			@RequestParam(required = false)String channel_market,
+			@RequestParam(required = false)String culture_code,
 			@RequestParam String unique_id,
 			@RequestParam(required = false) String vendor_code,
 			@RequestParam(required = false) String checkin_date
@@ -50,9 +51,9 @@ public class ConfigController {
 	@GetMapping("config/channelmarket")
 	public ResponseEntity<?> getChannelMarket(@RequestHeader(value = "Authorization") String auth,
 			@RequestHeader(value = "Authorization2", required = false) String auth2,
-			@RequestParam String sales_channel,
-			@RequestParam(defaultValue = "FR") String country_code,
-			@RequestParam(defaultValue = "fr") String language,
+			@RequestParam(defaultValue = "DIRECT", required = true) String sales_channel,
+			@RequestParam(defaultValue = "FR", required = true) String country_code,
+			@RequestParam(defaultValue = "fr", required = true) String language,
 			@RequestParam String unique_id){
 			if(securityManager.checkAuthentication(auth, auth2)) {
 				
