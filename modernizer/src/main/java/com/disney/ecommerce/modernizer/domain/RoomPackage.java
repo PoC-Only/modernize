@@ -169,12 +169,45 @@ public class RoomPackage {
 
 	@Override
 	public String toString() {
-		return "RoomPackage [itemNo=" + itemNo + ", packageCode=" + packageCode + ", packageName=" + packageName
-				+ ", numberParkDays=" + numberParkDays + ", checkInDate=" + checkInDate + ", checkOutDate="
-				+ checkOutDate + ", hotelCode=" + hotelCode + ", hotelName=" + hotelName + ", firstBookingValidityDate="
-				+ firstBookingValidityDate + ", lastBookingValidityDate=" + lastBookingValidityDate + ", roomType="
-				+ roomType + ", price=" + price + ", specialRequest=" + specialRequest + ", guestId=" + guestId
-				+ ", addOns=" + addOns + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("RoomPackage [itemNo=");
+		builder.append(itemNo);
+		builder.append(", packageCode=");
+		builder.append(packageCode);
+		builder.append(", packageName=");
+		builder.append(packageName);
+		builder.append(", numberParkDays=");
+		builder.append(numberParkDays);
+		builder.append(", checkInDate=");
+		builder.append(checkInDate);
+		builder.append(", checkOutDate=");
+		builder.append(checkOutDate);
+		builder.append(", hotelCode=");
+		builder.append(hotelCode);
+		builder.append(", hotelName=");
+		builder.append(hotelName);
+		builder.append(", firstBookingValidityDate=");
+		builder.append(firstBookingValidityDate);
+		builder.append(", lastBookingValidityDate=");
+		builder.append(lastBookingValidityDate);
+		builder.append(", roomType=");
+		builder.append(roomType);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append(", specialRequest=");
+		builder.append(specialRequest);
+		builder.append(", guestId=");
+		builder.append(guestId);
+		builder.append(", addOns=");
+		builder.append(addOns);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 	

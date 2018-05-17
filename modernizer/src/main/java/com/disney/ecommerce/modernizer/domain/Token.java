@@ -57,8 +57,23 @@ public class Token {
 
 	@Override
 	public String toString() {
-		return "Token [token=" + token + ", accountId=" + accountId + ", myDLPHash=" + myDLPHash + ", expiration="
-				+ expiration + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Token [token=");
+		builder.append(token);
+		builder.append(", accountId=");
+		builder.append(accountId);
+		builder.append(", myDLPHash=");
+		builder.append(myDLPHash);
+		builder.append(", expiration=");
+		builder.append(expiration);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 	
 }

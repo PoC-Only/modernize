@@ -137,12 +137,39 @@ public class Package {
 
 	@Override
 	public String toString() {
-		return "Package [roomPackageCode=" + roomPackageCode + ", packageDescription=" + packageDescription
-				+ ", firstBookingValidityDate=" + firstBookingValidityDate + ", lastBookingValidityDate="
-				+ lastBookingValidityDate + ", availabilityForStayDate=" + availabilityForStayDate + ", stayLength="
-				+ stayLength + ", numberParkDays=" + numberParkDays + ", offerCode=" + offerCode + ", priceDefaultRoom="
-				+ priceDefaultRoom + ", currency=" + currency + ", rooms=" + rooms + ", assumptiveAddOns="
-				+ assumptiveAddOns + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Package [roomPackageCode=");
+		builder.append(roomPackageCode);
+		builder.append(", packageDescription=");
+		builder.append(packageDescription);
+		builder.append(", firstBookingValidityDate=");
+		builder.append(firstBookingValidityDate);
+		builder.append(", lastBookingValidityDate=");
+		builder.append(lastBookingValidityDate);
+		builder.append(", availabilityForStayDate=");
+		builder.append(availabilityForStayDate);
+		builder.append(", stayLength=");
+		builder.append(stayLength);
+		builder.append(", numberParkDays=");
+		builder.append(numberParkDays);
+		builder.append(", offerCode=");
+		builder.append(offerCode);
+		builder.append(", priceDefaultRoom=");
+		builder.append(priceDefaultRoom);
+		builder.append(", currency=");
+		builder.append(currency);
+		builder.append(", rooms=");
+		builder.append(rooms);
+		builder.append(", assumptiveAddOns=");
+		builder.append(assumptiveAddOns);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 	
 }

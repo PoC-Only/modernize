@@ -199,14 +199,51 @@ public class BookingDetails {
 
 	@Override
 	public String toString() {
-		return "BookingDetails [bookingNumber=" + bookingNumber + ", bookingDate=" + bookingDate + ", bookingStatus="
-				+ bookingStatus + ", documentDeliveryDescription=" + documentDeliveryDescription + ", mininumDeposit="
-				+ mininumDeposit + ", grossTotalAmount=" + grossTotalAmount + ", netAmount=" + netAmount
-				+ ", amountDue=" + amountDue + ", guaranteeAmount=" + guaranteeAmount + ", currency=" + currency
-				+ ", balanceDueDate=" + balanceDueDate + ", cardHolderName=" + cardHolderName + ", cardNumber="
-				+ cardNumber + ", authorizationNmber=" + authorizationNmber + ", guestInformation=" + guestInformation
-				+ ", roomPackage=" + roomPackage + ", transportPackage=" + transportPackage + ", addOns=" + addOns
-				+ "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("BookingDetails [bookingNumber=");
+		builder.append(bookingNumber);
+		builder.append(", bookingDate=");
+		builder.append(bookingDate);
+		builder.append(", bookingStatus=");
+		builder.append(bookingStatus);
+		builder.append(", documentDeliveryDescription=");
+		builder.append(documentDeliveryDescription);
+		builder.append(", mininumDeposit=");
+		builder.append(mininumDeposit);
+		builder.append(", grossTotalAmount=");
+		builder.append(grossTotalAmount);
+		builder.append(", netAmount=");
+		builder.append(netAmount);
+		builder.append(", amountDue=");
+		builder.append(amountDue);
+		builder.append(", guaranteeAmount=");
+		builder.append(guaranteeAmount);
+		builder.append(", currency=");
+		builder.append(currency);
+		builder.append(", balanceDueDate=");
+		builder.append(balanceDueDate);
+		builder.append(", cardHolderName=");
+		builder.append(cardHolderName);
+		builder.append(", cardNumber=");
+		builder.append(cardNumber);
+		builder.append(", authorizationNmber=");
+		builder.append(authorizationNmber);
+		builder.append(", guestInformation=");
+		builder.append(guestInformation);
+		builder.append(", roomPackage=");
+		builder.append(roomPackage);
+		builder.append(", transportPackage=");
+		builder.append(transportPackage);
+		builder.append(", addOns=");
+		builder.append(addOns);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 	

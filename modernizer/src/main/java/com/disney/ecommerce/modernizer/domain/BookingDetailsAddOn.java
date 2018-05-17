@@ -66,8 +66,25 @@ public class BookingDetailsAddOn {
 
 	@Override
 	public String toString() {
-		return "BookingDetailsAddOn [category=" + category + ", addonCode=" + addonCode + ", name=" + name + ", price="
-				+ price + ", inventory=" + inventory + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("BookingDetailsAddOn [category=");
+		builder.append(category);
+		builder.append(", addonCode=");
+		builder.append(addonCode);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append(", inventory=");
+		builder.append(inventory);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 	

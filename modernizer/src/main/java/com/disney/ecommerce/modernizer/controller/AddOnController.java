@@ -1,5 +1,7 @@
 package com.disney.ecommerce.modernizer.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,11 +48,11 @@ public class AddOnController {
 			@RequestParam(required = false) String train_arrival_date,
 			@RequestParam(required = false) String train_destination_city,
 			@RequestParam(required = false) String train_segment_direction,
-			@RequestParam(required = false) String transport_package_code,
+			@RequestParam(required = false) List<String> transport_package_code,
 			@RequestParam String hotel_code,
 			@RequestParam(required = false) String room_package_code,
 			@RequestParam(required = false) String room_type,
-			@RequestParam(required = false) String addon_code			
+			@RequestParam(required = false) List<String> addon_code			
 			) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here

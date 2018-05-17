@@ -96,9 +96,31 @@ public class CartAddOn {
 
 	@Override
 	public String toString() {
-		return "CartAddOn [itemNo=" + itemNo + ", category=" + category + ", addonCode=" + addonCode + ", name=" + name
-				+ ", price=" + price + ", labelDate=" + labelDate + ", inventory=" + inventory + ", guestIds="
-				+ guestIds + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("CartAddOn [itemNo=");
+		builder.append(itemNo);
+		builder.append(", category=");
+		builder.append(category);
+		builder.append(", addonCode=");
+		builder.append(addonCode);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append(", labelDate=");
+		builder.append(labelDate);
+		builder.append(", inventory=");
+		builder.append(inventory);
+		builder.append(", guestIds=");
+		builder.append(guestIds);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

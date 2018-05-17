@@ -43,7 +43,21 @@ public class Inventory {
 
 	@Override
 	public String toString() {
-		return "Inventory [code=" + code + ", date=" + date + ", details=" + details + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Inventory [code=");
+		builder.append(code);
+		builder.append(", date=");
+		builder.append(date);
+		builder.append(", details=");
+		builder.append(details);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

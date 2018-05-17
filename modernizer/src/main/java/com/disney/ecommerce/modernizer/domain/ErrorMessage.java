@@ -29,7 +29,19 @@ public class ErrorMessage {
 
 	@Override
 	public String toString() {
-		return "ErrorMessage [error_code=" + error_code + ", error_description=" + error_description + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("ErrorMessage [error_code=");
+		builder.append(error_code);
+		builder.append(", error_description=");
+		builder.append(error_description);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

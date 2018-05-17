@@ -78,9 +78,27 @@ public class Room {
 
 	@Override
 	public String toString() {
-		return "Room [roomName=" + roomName + ", roomType=" + roomType + ", roomTypeCategory=" + roomTypeCategory
-				+ ", roomPrice=" + roomPrice + ", currency=" + currency + ", eligibleSellOnline=" + eligibleSellOnline
-				+ "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Room [roomName=");
+		builder.append(roomName);
+		builder.append(", roomType=");
+		builder.append(roomType);
+		builder.append(", roomTypeCategory=");
+		builder.append(roomTypeCategory);
+		builder.append(", roomPrice=");
+		builder.append(roomPrice);
+		builder.append(", currency=");
+		builder.append(currency);
+		builder.append(", eligibleSellOnline=");
+		builder.append(eligibleSellOnline);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 	
 	

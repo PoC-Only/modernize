@@ -67,8 +67,25 @@ public class EligibleCategory {
 
 	@Override
 	public String toString() {
-		return "EligibleCategory [categoryCode=" + categoryCode + ", name=" + name + ", displaySequence="
-				+ displaySequence + ", addOns=" + addOns + ", entity=" + entity + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("EligibleCategory [categoryCode=");
+		builder.append(categoryCode);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", displaySequence=");
+		builder.append(displaySequence);
+		builder.append(", addOns=");
+		builder.append(addOns);
+		builder.append(", entity=");
+		builder.append(entity);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

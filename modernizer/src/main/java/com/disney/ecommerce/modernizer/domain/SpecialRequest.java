@@ -57,9 +57,23 @@ public class SpecialRequest {
 
 	@Override
 	public String toString() {
-		return "SpecialRequest [requestCode=" + requestCode + ", requestDescription=" + requestDescription
-				+ ", adjoiningRoomNumber=" + adjoiningRoomNumber + ", adjoiningRoomGuestName=" + adjoiningRoomGuestName
-				+ "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("SpecialRequest [requestCode=");
+		builder.append(requestCode);
+		builder.append(", requestDescription=");
+		builder.append(requestDescription);
+		builder.append(", adjoiningRoomNumber=");
+		builder.append(adjoiningRoomNumber);
+		builder.append(", adjoiningRoomGuestName=");
+		builder.append(adjoiningRoomGuestName);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

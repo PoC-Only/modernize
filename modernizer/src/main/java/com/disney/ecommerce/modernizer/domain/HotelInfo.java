@@ -39,15 +39,47 @@ public class HotelInfo extends Hotel {
 
 	@Override
 	public String toString() {
-		return "HotelInfo [recommendedPackage=" + recommendedPackage + ", alternativePackage=" + alternativePackage
-				+ ", getHotelCode()=" + getHotelCode() + ", getGroupOfOffer()=" + getGroupOfOffer()
-				+ ", getEligibility()=" + getEligibility() + ", getNonEligibilityReason()=" + getNonEligibilityReason()
-				+ ", getHotelName()=" + getHotelName() + ", getHotelRating()=" + getHotelRating()
-				+ ", getHotelCategory()=" + getHotelCategory() + ", getBtlBeforeSwitch()=" + getBtlBeforeSwitch()
-				+ ", getBtlAfterSwitch()=" + getBtlAfterSwitch() + ", getMaxPartyMix()=" + getMaxPartyMix()
-				+ ", getMaxInfants()=" + getMaxInfants() + ", getMinLos()=" + getMinLos() + ", getMaxLos()="
-				+ getMaxLos() + ", getSpecialRequest()=" + getSpecialRequest() + ", toString()=" + super.toString()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("HotelInfo [recommendedPackage=");
+		builder.append(recommendedPackage);
+		builder.append(", alternativePackage=");
+		builder.append(alternativePackage);
+		builder.append(", getHotelCode()=");
+		builder.append(getHotelCode());
+		builder.append(", getGroupOfOffer()=");
+		builder.append(getGroupOfOffer());
+		builder.append(", getEligibility()=");
+		builder.append(getEligibility());
+		builder.append(", getNonEligibilityReason()=");
+		builder.append(getNonEligibilityReason());
+		builder.append(", getHotelName()=");
+		builder.append(getHotelName());
+		builder.append(", getHotelRating()=");
+		builder.append(getHotelRating());
+		builder.append(", getHotelCategory()=");
+		builder.append(getHotelCategory());
+		builder.append(", getBtlBeforeSwitch()=");
+		builder.append(getBtlBeforeSwitch());
+		builder.append(", getBtlAfterSwitch()=");
+		builder.append(getBtlAfterSwitch());
+		builder.append(", getMaxPartyMix()=");
+		builder.append(getMaxPartyMix());
+		builder.append(", getMaxInfants()=");
+		builder.append(getMaxInfants());
+		builder.append(", getMinLos()=");
+		builder.append(getMinLos());
+		builder.append(", getMaxLos()=");
+		builder.append(getMaxLos());
+		builder.append(", getSpecialRequest()=");
+		builder.append(getSpecialRequest());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append("]");
+		return builder.toString();
 	}
 
 

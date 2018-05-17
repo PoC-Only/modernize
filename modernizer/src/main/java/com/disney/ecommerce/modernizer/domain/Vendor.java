@@ -38,7 +38,19 @@ public class Vendor {
 
 	@Override
 	public String toString() {
-		return "Vendor [vendorCode=" + vendorCode + ", category=" + category + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Vendor [vendorCode=");
+		builder.append(vendorCode);
+		builder.append(", category=");
+		builder.append(category);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

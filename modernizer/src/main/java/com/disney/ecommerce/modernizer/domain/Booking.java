@@ -116,10 +116,35 @@ public class Booking {
 
 	@Override
 	public String toString() {
-		return "Booking [salesChannel=" + salesChannel + ", market=" + market + ", bookingNumber=" + bookingNumber
-				+ ", bookingDate=" + bookingDate + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
-				+ ", contactName=" + contactName + ", totalPartyMix=" + totalPartyMix + ", bookingStatus="
-				+ bookingStatus + ", pastCheckinDateFlag=" + pastCheckinDateFlag + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Booking [salesChannel=");
+		builder.append(salesChannel);
+		builder.append(", market=");
+		builder.append(market);
+		builder.append(", bookingNumber=");
+		builder.append(bookingNumber);
+		builder.append(", bookingDate=");
+		builder.append(bookingDate);
+		builder.append(", checkinDate=");
+		builder.append(checkinDate);
+		builder.append(", checkoutDate=");
+		builder.append(checkoutDate);
+		builder.append(", contactName=");
+		builder.append(contactName);
+		builder.append(", totalPartyMix=");
+		builder.append(totalPartyMix);
+		builder.append(", bookingStatus=");
+		builder.append(bookingStatus);
+		builder.append(", pastCheckinDateFlag=");
+		builder.append(pastCheckinDateFlag);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

@@ -37,7 +37,19 @@ public class ChannelMarket {
 
 	@Override
 	public String toString() {
-		return "ChannelMarket [channelMarket=" + channelMarket + ", cultureCode=" + cultureCode + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("ChannelMarket [channelMarket=");
+		builder.append(channelMarket);
+		builder.append(", cultureCode=");
+		builder.append(cultureCode);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 	

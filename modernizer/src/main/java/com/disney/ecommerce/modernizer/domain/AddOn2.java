@@ -56,8 +56,23 @@ public class AddOn2 {
 
 	@Override
 	public String toString() {
-		return "AddOn2 [category=" + category + ", addOnCode=" + addOnCode + ", name=" + name + ", price=" + price
-				+ "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("AddOn2 [category=");
+		builder.append(category);
+		builder.append(", addOnCode=");
+		builder.append(addOnCode);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 	

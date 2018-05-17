@@ -47,7 +47,21 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [paxType=" + paxType + ", minAge=" + minAge + ", maxAge=" + maxAge + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Category [paxType=");
+		builder.append(paxType);
+		builder.append(", minAge=");
+		builder.append(minAge);
+		builder.append(", maxAge=");
+		builder.append(maxAge);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

@@ -209,12 +209,51 @@ public class Guest {
 
 	@Override
 	public String toString() {
-		return "Guest [guestId=" + guestId + ", title=" + title + ", gender=" + gender + ", firstname=" + firstname
-				+ ", lastname=" + lastname + ", dateBirth=" + dateBirth + ", typeOfDocument=" + typeOfDocument
-				+ ", documentExpirityDate=" + documentExpirityDate + ", country_delivery_document="
-				+ country_delivery_document + ", documentNumber=" + documentNumber + ", addressLine1=" + addressLine1
-				+ ", addressLine2=" + addressLine2 + ", cityName=" + cityName + ", zip=" + zip + ", country=" + country
-				+ ", phoneNumber=" + phoneNumber + ", mail=" + mail + ", optin=" + optin + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Guest [guestId=");
+		builder.append(guestId);
+		builder.append(", title=");
+		builder.append(title);
+		builder.append(", gender=");
+		builder.append(gender);
+		builder.append(", firstname=");
+		builder.append(firstname);
+		builder.append(", lastname=");
+		builder.append(lastname);
+		builder.append(", dateBirth=");
+		builder.append(dateBirth);
+		builder.append(", typeOfDocument=");
+		builder.append(typeOfDocument);
+		builder.append(", documentExpirityDate=");
+		builder.append(documentExpirityDate);
+		builder.append(", country_delivery_document=");
+		builder.append(country_delivery_document);
+		builder.append(", documentNumber=");
+		builder.append(documentNumber);
+		builder.append(", addressLine1=");
+		builder.append(addressLine1);
+		builder.append(", addressLine2=");
+		builder.append(addressLine2);
+		builder.append(", cityName=");
+		builder.append(cityName);
+		builder.append(", zip=");
+		builder.append(zip);
+		builder.append(", country=");
+		builder.append(country);
+		builder.append(", phoneNumber=");
+		builder.append(phoneNumber);
+		builder.append(", mail=");
+		builder.append(mail);
+		builder.append(", optin=");
+		builder.append(optin);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

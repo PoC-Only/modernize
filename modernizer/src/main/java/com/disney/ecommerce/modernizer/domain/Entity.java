@@ -128,11 +128,37 @@ public class Entity {
 
 	@Override
 	public String toString() {
-		return "Entity [entityCode=" + entityCode + ", entityPicutre=" + entityPicutre + ", entityName=" + entityName
-				+ ", entityShortDescription=" + entityShortDescription + ", entityDescription=" + entityDescription
-				+ ", displaySequence=" + displaySequence + ", carWashImageId=" + carWashImageId + ", entityChildPrice="
-				+ entityChildPrice + ", entityAdultPrice=" + entityAdultPrice + ", uniquePrice=" + uniquePrice
-				+ ", currency=" + currency + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Entity [entityCode=");
+		builder.append(entityCode);
+		builder.append(", entityPicutre=");
+		builder.append(entityPicutre);
+		builder.append(", entityName=");
+		builder.append(entityName);
+		builder.append(", entityShortDescription=");
+		builder.append(entityShortDescription);
+		builder.append(", entityDescription=");
+		builder.append(entityDescription);
+		builder.append(", displaySequence=");
+		builder.append(displaySequence);
+		builder.append(", carWashImageId=");
+		builder.append(carWashImageId);
+		builder.append(", entityChildPrice=");
+		builder.append(entityChildPrice);
+		builder.append(", entityAdultPrice=");
+		builder.append(entityAdultPrice);
+		builder.append(", uniquePrice=");
+		builder.append(uniquePrice);
+		builder.append(", currency=");
+		builder.append(currency);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

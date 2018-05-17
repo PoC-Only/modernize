@@ -47,8 +47,21 @@ public class CheckInDate {
 
 	@Override
 	public String toString() {
-		return "CheckInDate [checkInStartDate=" + checkInStartDate + ", checkInEndDate=" + checkInEndDate
-				+ ", checkInDayOfWeek=" + checkInDayOfWeek + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("CheckInDate [checkInStartDate=");
+		builder.append(checkInStartDate);
+		builder.append(", checkInEndDate=");
+		builder.append(checkInEndDate);
+		builder.append(", checkInDayOfWeek=");
+		builder.append(checkInDayOfWeek);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

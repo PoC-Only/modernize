@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.disney.ecommerce.modernizer.domain.ErrorMessage;
@@ -30,9 +31,22 @@ public class CartController {
 	@Autowired
 	private ISecurityManager securityManager;
 
-	@GetMapping("cart")
-	public ResponseEntity<?> getCart(@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+	@GetMapping("cart/{cart_id}")
+	public ResponseEntity<?> getCart(
+			@ApiParam(required = true) @PathVariable("cart_id") String cart_id,
+			@RequestHeader(value = "Authorization") String auth,
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false)String sales_channel,
+			@RequestParam(required = false)String country_code,
+			@RequestParam(required = false)String language,
+			@RequestParam(required = false)String channel_market,
+			@RequestParam(required = false)String culture_code,
+			@RequestParam String unique_id,
+			@RequestParam(required = false) String ta_code,
+			@RequestParam(required = false) String mydlp_id,
+			@RequestParam(required = false) String availability_flag,
+			@RequestParam(required = false) String amount_computation_flag
+			) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 
@@ -44,7 +58,15 @@ public class CartController {
 	
 	@PutMapping("cart")
 	public ResponseEntity<?> putCart(@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false)String sales_channel,
+			@RequestParam(required = false)String country_code,
+			@RequestParam(required = false)String language,
+			@RequestParam(required = false)String channel_market,
+			@RequestParam(required = false)String culture_code,
+			@RequestParam String unique_id,
+			@RequestParam(required = false) String ta_code,
+			@RequestParam(required = false) String mydlp_id) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 
@@ -58,7 +80,15 @@ public class CartController {
 	public ResponseEntity<?> putCartItem(
 			@ApiParam(required = true) @PathVariable("cart_id") String cartId,
 			@RequestHeader(value = "Authorization") String auth,
-			@RequestHeader(value = "Authorization2", required = false) String auth2) {
+			@RequestHeader(value = "Authorization2", required = false) String auth2,
+			@RequestParam(required = false)String sales_channel,
+			@RequestParam(required = false)String country_code,
+			@RequestParam(required = false)String language,
+			@RequestParam(required = false)String channel_market,
+			@RequestParam(required = false)String culture_code,
+			@RequestParam String unique_id,
+			@RequestParam(required = false) String ta_code,
+			@RequestParam(required = false) String mydlp_id) {
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here
 

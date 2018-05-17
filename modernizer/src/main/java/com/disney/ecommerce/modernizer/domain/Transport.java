@@ -137,11 +137,39 @@ public class Transport {
 
 	@Override
 	public String toString() {
-		return "Transport [transportaionOfferName=" + transportaionOfferName + ", carrierCode=" + carrierCode
-				+ ", carrierName=" + carrierName + ", flightTrainNumber=" + flightTrainNumber + ", planeTrainType="
-				+ planeTrainType + ", fareClass=" + fareClass + ", serviceClass=" + serviceClass + ", departurePlace="
-				+ departurePlace + ", arrivalPlace=" + arrivalPlace + ", departureDate=" + departureDate
-				+ ", departureHour=" + departureHour + ", arrivalHour=" + arrivalHour + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Transport [transportaionOfferName=");
+		builder.append(transportaionOfferName);
+		builder.append(", carrierCode=");
+		builder.append(carrierCode);
+		builder.append(", carrierName=");
+		builder.append(carrierName);
+		builder.append(", flightTrainNumber=");
+		builder.append(flightTrainNumber);
+		builder.append(", planeTrainType=");
+		builder.append(planeTrainType);
+		builder.append(", fareClass=");
+		builder.append(fareClass);
+		builder.append(", serviceClass=");
+		builder.append(serviceClass);
+		builder.append(", departurePlace=");
+		builder.append(departurePlace);
+		builder.append(", arrivalPlace=");
+		builder.append(arrivalPlace);
+		builder.append(", departureDate=");
+		builder.append(departureDate);
+		builder.append(", departureHour=");
+		builder.append(departureHour);
+		builder.append(", arrivalHour=");
+		builder.append(arrivalHour);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

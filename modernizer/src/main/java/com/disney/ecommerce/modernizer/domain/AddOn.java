@@ -59,8 +59,23 @@ public class AddOn {
 
 	@Override
 	public String toString() {
-		return "AddOn [addonCode=" + addonCode + ", addonDescription=" + addonDescription + ", addonPrice=" + addonPrice
-				+ ", addonCurrency=" + addonCurrency + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("AddOn [addonCode=");
+		builder.append(addonCode);
+		builder.append(", addonDescription=");
+		builder.append(addonDescription);
+		builder.append(", addonPrice=");
+		builder.append(addonPrice);
+		builder.append(", addonCurrency=");
+		builder.append(addonCurrency);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 	
 }

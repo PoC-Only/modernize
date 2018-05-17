@@ -60,8 +60,23 @@ public class CartInput {
 
 	@Override
 	public String toString() {
-		return "CartInput [guestInformation=" + guestInformation + ", roomPackage=" + roomPackage
-				+ ", transportPackage=" + transportPackage + ", addOns=" + addOns + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("CartInput [guestInformation=");
+		builder.append(guestInformation);
+		builder.append(", roomPackage=");
+		builder.append(roomPackage);
+		builder.append(", transportPackage=");
+		builder.append(transportPackage);
+		builder.append(", addOns=");
+		builder.append(addOns);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

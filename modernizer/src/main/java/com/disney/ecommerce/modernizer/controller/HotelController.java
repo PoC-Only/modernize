@@ -124,8 +124,7 @@ public class HotelController {
 			@RequestParam(required = false) List<String> date_birth_child,
 			@RequestParam(required = false) List<String> date_birth_infant,
 			@RequestParam(required = false) String offer_code, 
-			@RequestParam(required = false) String transport_compatible,
-			@RequestParam String hotel_code) {
+			@RequestParam(required = false) String transport_compatible) {
 		
 		if (securityManager.checkAuthentication(auth, auth2)) {
 			// TODO put implementations here

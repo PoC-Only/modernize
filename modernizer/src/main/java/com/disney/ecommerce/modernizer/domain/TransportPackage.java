@@ -97,9 +97,31 @@ public class TransportPackage {
 
 	@Override
 	public String toString() {
-		return "TransportPackage [itemNo=" + itemNo + ", packageCode=" + packageCode + ", transportMode="
-				+ transportMode + ", price=" + price + ", outbound=" + outbound + ", inbound=" + inbound + ", guestIds="
-				+ guestIds + ", addOns=" + addOns + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("TransportPackage [itemNo=");
+		builder.append(itemNo);
+		builder.append(", packageCode=");
+		builder.append(packageCode);
+		builder.append(", transportMode=");
+		builder.append(transportMode);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append(", outbound=");
+		builder.append(outbound);
+		builder.append(", inbound=");
+		builder.append(inbound);
+		builder.append(", guestIds=");
+		builder.append(guestIds);
+		builder.append(", addOns=");
+		builder.append(addOns);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

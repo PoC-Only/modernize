@@ -37,7 +37,19 @@ public class PartyMix {
 
 	@Override
 	public String toString() {
-		return "PartyMix [maxPartyMix=" + maxPartyMix + ", maxInfants=" + maxInfants + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("PartyMix [maxPartyMix=");
+		builder.append(maxPartyMix);
+		builder.append(", maxInfants=");
+		builder.append(maxInfants);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 	
 	

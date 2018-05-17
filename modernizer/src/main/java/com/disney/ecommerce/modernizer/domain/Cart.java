@@ -170,12 +170,39 @@ public class Cart {
 
 	@Override
 	public String toString() {
-		return "Cart [cartId=" + cartId + ", creationDate=" + creationDate + ", cartStatus=" + cartStatus
-				+ ", cartName=" + cartName + ", channelMarket=" + channelMarket + ", country=" + country
-				+ ", grossTotalAmount=" + grossTotalAmount + ", netAmount=" + netAmount + ", balanceAmount="
-				+ balanceAmount + ", depositAmount=" + depositAmount + ", currency=" + Arrays.toString(currency)
-				+ ", guestInformation=" + guestInformation + ", roomPackage=" + roomPackage + ", transportPackage="
-				+ transportPackage + ", addOns=" + addOns + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Cart [cartId=");
+		builder.append(cartId);
+		builder.append(", creationDate=");
+		builder.append(creationDate);
+		builder.append(", cartStatus=");
+		builder.append(cartStatus);
+		builder.append(", cartName=");
+		builder.append(cartName);
+		builder.append(", channelMarket=");
+		builder.append(channelMarket);
+		builder.append(", country=");
+		builder.append(country);
+		builder.append(", grossTotalAmount=");
+		builder.append(grossTotalAmount);
+		builder.append(", netAmount=");
+		builder.append(netAmount);
+		builder.append(", balanceAmount=");
+		builder.append(balanceAmount);
+		builder.append(", depositAmount=");
+		builder.append(depositAmount);
+		builder.append(", currency=");
+		builder.append(Arrays.toString(currency));
+		builder.append(", guestInformation=");
+		builder.append(guestInformation);
+		builder.append(", roomPackage=");
+		builder.append(roomPackage);
+		builder.append(", transportPackage=");
+		builder.append(transportPackage);
+		builder.append(", addOns=");
+		builder.append(addOns);
+		builder.append("]");
+		return builder.toString();
 	}
 
 }

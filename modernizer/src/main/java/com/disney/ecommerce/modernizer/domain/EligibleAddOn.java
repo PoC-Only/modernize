@@ -206,14 +206,47 @@ public class EligibleAddOn {
 
 	@Override
 	public String toString() {
-		return "EligibleAddOn [addOnCode=" + addOnCode + ", entityCode=" + entityCode + ", formulaCode=" + formulaCode
-				+ ", labelDate=" + labelDate + ", name=" + name + ", shortDescription=" + shortDescription
-				+ ", specificInformation=" + specificInformation + ", additionalInformation=" + additionalInformation
-				+ ", addonDisplaySequence=" + addonDisplaySequence + ", eligibility=" + eligibility
-				+ ", nonEligibilityReason=" + nonEligibilityReason + ", adultPrice=" + adultPrice + ", childPrice="
-				+ childPrice + ", currency=" + currency + ", dexEligible=" + dexEligible + ", outboundVeaRequired="
-				+ outboundVeaRequired + ", inboundVeaRequired=" + inboundVeaRequired + ", outboundVeaEligible="
-				+ outboundVeaEligible + ", inboundVeaEligible=" + inboundVeaEligible + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("EligibleAddOn [addOnCode=");
+		builder.append(addOnCode);
+		builder.append(", entityCode=");
+		builder.append(entityCode);
+		builder.append(", formulaCode=");
+		builder.append(formulaCode);
+		builder.append(", labelDate=");
+		builder.append(labelDate);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", shortDescription=");
+		builder.append(shortDescription);
+		builder.append(", specificInformation=");
+		builder.append(specificInformation);
+		builder.append(", additionalInformation=");
+		builder.append(additionalInformation);
+		builder.append(", addonDisplaySequence=");
+		builder.append(addonDisplaySequence);
+		builder.append(", eligibility=");
+		builder.append(eligibility);
+		builder.append(", nonEligibilityReason=");
+		builder.append(nonEligibilityReason);
+		builder.append(", adultPrice=");
+		builder.append(adultPrice);
+		builder.append(", childPrice=");
+		builder.append(childPrice);
+		builder.append(", currency=");
+		builder.append(currency);
+		builder.append(", dexEligible=");
+		builder.append(dexEligible);
+		builder.append(", outboundVeaRequired=");
+		builder.append(outboundVeaRequired);
+		builder.append(", inboundVeaRequired=");
+		builder.append(inboundVeaRequired);
+		builder.append(", outboundVeaEligible=");
+		builder.append(outboundVeaEligible);
+		builder.append(", inboundVeaEligible=");
+		builder.append(inboundVeaEligible);
+		builder.append("]");
+		return builder.toString();
 	}
 	
 	

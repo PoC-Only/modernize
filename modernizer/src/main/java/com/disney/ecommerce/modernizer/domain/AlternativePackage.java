@@ -178,13 +178,47 @@ public class AlternativePackage {
 
 	@Override
 	public String toString() {
-		return "AlternativePackage [roomPackageCode=" + roomPackageCode + ", packageDescription=" + packageDescription
-				+ ", firstBookingValidityDate=" + firstBookingValidityDate + ", lastBookingValidityDate="
-				+ lastBookingValidityDate + ", change=" + change + ", hotelCode=" + hotelCode + ", hotelName="
-				+ hotelName + ", hotelRating=" + hotelRating + ", hotelCategory=" + hotelCategory
-				+ ", partyMixCombination=" + partyMixCombination + ", numberParkDays=" + numberParkDays
-				+ ", priceDefaultRoom=" + priceDefaultRoom + ", currency=" + currency + ", deltaPrice=" + deltaPrice
-				+ ", rooms=" + rooms + ", assumptiveAddOns=" + assumptiveAddOns + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("AlternativePackage [roomPackageCode=");
+		builder.append(roomPackageCode);
+		builder.append(", packageDescription=");
+		builder.append(packageDescription);
+		builder.append(", firstBookingValidityDate=");
+		builder.append(firstBookingValidityDate);
+		builder.append(", lastBookingValidityDate=");
+		builder.append(lastBookingValidityDate);
+		builder.append(", change=");
+		builder.append(change);
+		builder.append(", hotelCode=");
+		builder.append(hotelCode);
+		builder.append(", hotelName=");
+		builder.append(hotelName);
+		builder.append(", hotelRating=");
+		builder.append(hotelRating);
+		builder.append(", hotelCategory=");
+		builder.append(hotelCategory);
+		builder.append(", partyMixCombination=");
+		builder.append(partyMixCombination);
+		builder.append(", numberParkDays=");
+		builder.append(numberParkDays);
+		builder.append(", priceDefaultRoom=");
+		builder.append(priceDefaultRoom);
+		builder.append(", currency=");
+		builder.append(currency);
+		builder.append(", deltaPrice=");
+		builder.append(deltaPrice);
+		builder.append(", rooms=");
+		builder.append(rooms);
+		builder.append(", assumptiveAddOns=");
+		builder.append(assumptiveAddOns);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 	

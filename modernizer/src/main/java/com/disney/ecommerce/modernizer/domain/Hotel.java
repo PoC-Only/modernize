@@ -160,12 +160,45 @@ public class Hotel {
 
 	@Override
 	public String toString() {
-		return "Hotel [hotelCode=" + hotelCode + ", groupOfOffer=" + groupOfOffer + ", eligibility=" + eligibility
-				+ ", nonEligibilityReason=" + nonEligibilityReason + ", hotelName=" + hotelName + ", hotelRating="
-				+ hotelRating + ", hotelCategory=" + hotelCategory + ", checkInDates=" + checkInDates
-				+ ", btlBeforeSwitch=" + btlBeforeSwitch + ", btlAfterSwitch=" + btlAfterSwitch + ", maxPartyMix="
-				+ maxPartyMix + ", maxInfants=" + maxInfants + ", minLos=" + minLos + ", maxLos=" + maxLos
-				+ ", specialRequest=" + specialRequest + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Hotel [hotelCode=");
+		builder.append(hotelCode);
+		builder.append(", groupOfOffer=");
+		builder.append(groupOfOffer);
+		builder.append(", eligibility=");
+		builder.append(eligibility);
+		builder.append(", nonEligibilityReason=");
+		builder.append(nonEligibilityReason);
+		builder.append(", hotelName=");
+		builder.append(hotelName);
+		builder.append(", hotelRating=");
+		builder.append(hotelRating);
+		builder.append(", hotelCategory=");
+		builder.append(hotelCategory);
+		builder.append(", checkInDates=");
+		builder.append(checkInDates);
+		builder.append(", btlBeforeSwitch=");
+		builder.append(btlBeforeSwitch);
+		builder.append(", btlAfterSwitch=");
+		builder.append(btlAfterSwitch);
+		builder.append(", maxPartyMix=");
+		builder.append(maxPartyMix);
+		builder.append(", maxInfants=");
+		builder.append(maxInfants);
+		builder.append(", minLos=");
+		builder.append(minLos);
+		builder.append(", maxLos=");
+		builder.append(maxLos);
+		builder.append(", specialRequest=");
+		builder.append(specialRequest);
+		builder.append(", getClass()=");
+		builder.append(getClass());
+		builder.append(", hashCode()=");
+		builder.append(hashCode());
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
 	}
 
 }
