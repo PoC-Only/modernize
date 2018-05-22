@@ -51,9 +51,9 @@ public class ConfigController {
 	@GetMapping("config/channelmarket")
 	public ResponseEntity<?> getChannelMarket(@RequestHeader(value = "Authorization") String auth,
 			@RequestHeader(value = "Authorization2", required = false) String auth2,
-			@RequestParam(defaultValue = "DIRECT", required = true) String sales_channel,
-			@RequestParam(defaultValue = "FR", required = true) String country_code,
-			@RequestParam(defaultValue = "fr", required = true) String language,
+			@RequestParam(defaultValue = "DIRECT") String sales_channel,
+			@RequestParam(defaultValue = "FR") String country_code,
+			@RequestParam(defaultValue = "fr") String language,
 			@RequestParam String unique_id){
 			if(securityManager.checkAuthentication(auth, auth2)) {
 				

@@ -91,6 +91,7 @@ public class HotelController {
 			@RequestParam Integer number_infants,
 			@RequestParam(required = false) List<String> date_birth_child,
 			@RequestParam(required = false) List<String> date_birth_infant,
+			@RequestParam String is_regional_tax,
 			@RequestParam(required = false) String hotel_code, 
 			@RequestParam(required = false) String transport_compatible
 			) {
