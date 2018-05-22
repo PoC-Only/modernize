@@ -41,6 +41,8 @@ public class JWTUtil {
 		byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(SECRET);
 		Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 
+		if (myDLPHash==null) myDLPHash = "";
+		
 		JwtBuilder builder = Jwts.builder().setId(SecurityConstants.JWT_ID).setIssuedAt(now)
 				.setSubject(SecurityConstants.JWT_SUBJECT).setIssuer(SecurityConstants.JWT_ISSUER)
 				.claim("account_id", accountId).claim("myDLPHash", myDLPHash).claim("expiration", expiration)
@@ -48,10 +50,6 @@ public class JWTUtil {
 
 		Token token = new Token();
 		token.setToken(builder.compact());
-		token.setAccountId(accountId);
-		token.setMyDLPHash(myDLPHash);
-		token.setExpiration(expiration);
-
 		return token;
 	}
 
