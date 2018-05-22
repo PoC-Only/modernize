@@ -33,12 +33,9 @@ public class UserController {
 	private IUserService userService;
 	
 	@PostMapping("user/login")	
-	public ResponseEntity<?> login(@RequestBody Login user) {
-		LOGGER.info("MODERNIZER: Endpoint:/user/guest Method:Post username:" + user.getUser_name());
-		
-		Response resp = userService.login(user);
-		
-		LOGGER.info("POST /user/guest :" + resp.getBody());
+	public ResponseEntity<?> login(@RequestBody Login user) {		
+		Response resp = userService.login(user);		
+		LOGGER.info("[MODERNIZER]:[" + resp.getStatusCode() + "]-" + resp.getBody());
 		if (resp.getStatusCode().equals(HttpStatus.OK)) {
 			return new ResponseEntity<Token>((Token)resp.getBody(), resp.getStatusCode());
 		} else {
